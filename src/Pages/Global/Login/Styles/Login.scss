@@ -1,86 +1,109 @@
 @import "src/Utils/Styles/variables.scss";
 
 .login-page-wrapper {
+  color: $base-white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   a {
-    color: $link-color;
+    color: $base-blue;
+    text-decoration: none;
+    font-family: $base-font-family;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 15*$base-pixel-size;
+      height: auto;
+      margin-top: 3*$base-pixel-size;
+    }
+
+    h1 {
+      font-size: 4*$base-pixel-size;
+      margin-top: 3*$base-pixel-size;
+    }
+
+    p {
+      font-size: 2*$base-pixel-size;
+      margin-top: 2*$base-pixel-size;
+      margin-bottom: 3*$base-pixel-size;
+    }
+
+  }
+
+  .error-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 1*$base-pixel-size;
+    padding: $base-pixel-size;
+    background-color: $error-message-color;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
   }
 
   .content-container {
-    width: 40%;
+    width: 25%;
     background-color: $base-background;
-    margin-top: 10*$base-pixel-size;
-    margin-bottom: 10*$base-pixel-size;
-
-    .error-message-container {
-      background-color: $error-message-color;
-    }
-
-    .error-message-container,
-    .success-message-container {
-      width: 100%;
-      padding: 3.5*$base-pixel-size;
-      color: #FFF;
-    }
-
-    .success-message-container {
-      background-color: #44998F;
-    }
+    padding: $base-pixel-size 0;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
 
     .form {
-      padding: 0 10*$base-pixel-size;
-
+      padding: 0 2*$base-pixel-size;
 
       .button-wrapper {
         display: flex;
         justify-content: center;
-        margin-bottom: 5*$base-pixel-size;
       }
 
       .input-container {
         .form-input-wrapper {
-          margin-bottom: 3*$base-pixel-size;
+          margin-bottom: $base-pixel-size;
         }
       }
     }
 
-    .top {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $base-white;
-
-      img {
-        width: 10*$base-pixel-size;
-        height: auto;
-      }
-
-      h1 {
-        padding: 10*$base-pixel-size 10*$base-pixel-size 3*$base-pixel-size;
-        font-size: 4*$base-pixel-size;
-      }
-
-      p {
-        padding: 0 10*$base-pixel-size 5*$base-pixel-size ;
-        font-size: 2*$base-pixel-size;
-      }
-
-    }
-
-    .additional-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 5*$base-pixel-size;
-      border-top: 2px solid $base-foreground;
-
-      p {
-        color: $base-white;
-        font-family: 'MontserratBold', serif;
-        margin-bottom: $base-pixel-size;
-      }
-    }
   }
+
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-top: 1*$base-pixel-size;
+    padding: $base-pixel-size;
+    background-color: $base-background;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
+
+    p {
+      font-family: $base-bold-font-family;
+      margin-bottom: $base-pixel-size;
+    }
+
+  }
+
+  .login-menu-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3*$base-pixel-size;
+
+    a {
+      margin-right: 5*$base-pixel-size;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
 }

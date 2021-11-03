@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Montserrat', serif;
-    src: url('Font/Montserrat-Regular.ttf');
+    font-family: 'Segoe UI', sans-serif;
+    src: url('Font/Segoe UI.ttf');
 }
 
 @font-face {
-    font-family: 'MontserratBold', serif;
-    src: url('Font/Montserrat-SemiBold.ttf');
+    font-family: 'Segoe UI Bold', sans-serif;
+    src: url('Font/Segoe UI Bold.ttf');
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .main-app-wrapper,

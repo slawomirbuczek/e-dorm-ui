@@ -36,15 +36,18 @@ const Login = (): JSX.Element => {
         const result = loginUser && await loginUser(data);
 
         if (!result) {
-            return null;
+            return setMessageToTheUser({
+                isSuccess: false,
+                message: 'Incorrect username or password'
+            });
         }
 
-        const {message, isSuccess} = result;
+        const {isSuccess} = result;
 
         if (!isSuccess) {
             return setMessageToTheUser({
-                isSuccess,
-                message
+                isSuccess: false,
+                message: 'Incorrect username or password'
             });
         }
 
@@ -88,15 +91,15 @@ const Login = (): JSX.Element => {
 
     return (
         <div className="login-page-wrapper" ref={userMessageRef}>
+            <div className="top">
+                <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="logo"/>
+                <h1>Sign in to Virtual Dormitory</h1>
+                <p>
+                    By continuing, you agree to our <Link to={"/terms"}>User Agreement</Link> and <Link to="/privacy">Privacy Policy</Link>
+                </p>
+            </div>
+            <MessageToTheUser {...messageToTheUser} />
             <div className="content-container">
-                <MessageToTheUser {...messageToTheUser} />
-                <div className="top">
-                    <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="image"/>
-                    <h1>Sign in to Virtual Dormitory</h1>
-                    <p>
-                        By continuing, you agree to our <Link to={"/terms"}>User Agreement</Link> and <Link to="/privacy">Privacy Policy</Link>.
-                    </p>
-                </div>
                 <div className="form">
                     <div className="input-container">
                         <FormInput
@@ -121,10 +124,16 @@ const Login = (): JSX.Element => {
                         value="Login"
                     />
                 </div>
-                <div className="additional-info">
-                    <p>Don’t have an account yet?</p>
-                    <Link to="/register">Create an account</Link>
-                </div>
+            </div>
+            <div className="additional-info">
+                <p>Don’t have an account yet?</p>
+                <Link to="/register">Create an account</Link>
+            </div>
+            <div className="login-menu-list">
+                <Link to='/about'>About</Link>
+                <Link to='/terms'>Terms</Link>
+                <Link to='/privacy'>Privacy</Link>
+                <Link to='/faq'>FAQ</Link>
             </div>
         </div>
     );

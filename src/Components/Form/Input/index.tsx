@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import PasswordToggler from './Components/PasswordToggler';
 import Header from './Components/Header';
 import ErrorInformation from '../ErrorInformation';
 import IInput from './Types/IInput';
@@ -20,7 +19,7 @@ const FormInput = ({
                    }: IInput) => {
     const [errorInformation, setErrorInformation] = useState<string | null>(null);
     const [isInputFilled, setIsInputFilled] = useState<boolean>(false);
-    const [inputType, setInputType] = useState<EInputTypes>(type);
+    const [inputType] = useState<EInputTypes>(type);
 
     useEffect(() => {
         isRequired && errorMessage && setErrorInformation(errorMessage);
@@ -68,7 +67,6 @@ const FormInput = ({
                     onBlur={onBlurChangeBorderStyle}
                     onKeyPress={onKeyPress}
                 />
-                {type === EInputTypes.PASSWORD && <PasswordToggler type={inputType} onTypeChange={setInputType}/>}
             </div>
             <ErrorInformation errorMessage={errorInformation}/>
         </div>
