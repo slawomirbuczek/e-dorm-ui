@@ -36,28 +36,3 @@
     flex-direction: column;
     background-color: #F8F9FA;
 }
-
-@media screen and (max-width: 480px) {
-
-    .page-wrapper,
-    .page-wrapper-authenticated {
-        padding-top: 64px;
-    }
-
-    .main-app-wrapper-authenticated {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-}
-
-h1 {
-    color: #cacecf;
-    font-size: 32px;
-}

@@ -50,38 +50,3 @@
     }
   }
 }
-
-@media screen and (max-width: 480px) {
-  .about-page-wrapper {
-    padding: 0;
-    background-color: #FFF;
-
-    .button-wrapper {
-      padding: 3*$base-pixel-size;
-      width: 100%;
-    }
-
-    .project {
-      margin-bottom: 0;
-    }
-
-    .people {
-      overflow: hidden;
-
-      h1 {
-        margin-bottom: 3*$base-pixel-size;
-      }
-    }
-
-    .list-of-people {
-      width: 100%;
-      overflow-x: scroll;
-      padding: 0 3*$base-pixel-size;
-
-      .single-person {
-        width: 850px;
-        grid-template-columns: 150px 300px 1fr;
-      }
-    }
-  }
-}

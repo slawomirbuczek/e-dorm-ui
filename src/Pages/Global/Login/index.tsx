@@ -5,8 +5,6 @@ import EInputTypes from "Components/Form/Input/Types/EInputTypes";
 import {useContext, useRef, useState} from "react";
 import ILoginCredentials from "./Types/ILoginCredentials";
 import {Link, useHistory} from "react-router-dom";
-import useWindowSize from "Utils/Functions/useWindowSize";
-import checkIsMobileView from "Utils/Functions/checkIsMobileView";
 import {TokenContext} from "Context/Token";
 import IValidators from "./Types/IValidators";
 import checkValidation from "../Register/Functions/checkValidation";
@@ -17,8 +15,6 @@ import "./Styles/Login.scss";
 
 const Login = (): JSX.Element => {
     const {loginUser} = useContext(TokenContext);
-    const {width} = useWindowSize();
-    const isMobileView = checkIsMobileView(width);
     const [loginCredentials, setUpLoginCredentials] = useState<ILoginCredentials>({
         email: "",
         password: "",
@@ -86,7 +82,7 @@ const Login = (): JSX.Element => {
         return updateLoginCredentials(key, value);
     };
 
-    const forgotPasswordHeader = <Link to="/forgot-password">Forgot your password?</Link>;
+    const forgotPasswordHeader = <Link to="/forgot-password" tabIndex={-1}>Forgot your password?</Link>;
 
     const {email, password} = loginCredentials;
 
@@ -94,7 +90,13 @@ const Login = (): JSX.Element => {
         <div className="login-page-wrapper" ref={userMessageRef}>
             <div className="content-container">
                 <MessageToTheUser {...messageToTheUser} />
-                <h1>Log in</h1>
+                <div className="top">
+                    <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="image"/>
+                    <h1>Sign in to Virtual Dormitory</h1>
+                    <p>
+                        By continuing, you agree to our <Link to={"/terms"}>User Agreement</Link> and <Link to="/privacy">Privacy Policy</Link>.
+                    </p>
+                </div>
                 <div className="form">
                     <div className="input-container">
                         <FormInput
@@ -110,13 +112,13 @@ const Login = (): JSX.Element => {
                             onChange={value => goThroughValidators('password', value)}
                             type={EInputTypes.PASSWORD}
                             header="Password"
-                            headerChildren={isMobileView ? null : forgotPasswordHeader}
+                            headerChildren={forgotPasswordHeader}
                         />
                     </div>
                     <Button
                         onClick={onLoginIn}
                         type={EButtonTypeList.PRIMARY}
-                        value="Log in"
+                        value="Login"
                     />
                 </div>
                 <div className="additional-info">
