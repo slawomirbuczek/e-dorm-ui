@@ -1,6 +1,8 @@
 export default interface ISignUpCredentials {
     email: string;
     password: string;
-    name: string;
-    lastname: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    birthday: string;
 }

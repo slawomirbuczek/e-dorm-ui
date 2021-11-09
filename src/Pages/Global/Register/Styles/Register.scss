@@ -1,12 +1,38 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .register-page-wrapper {
+  color: $base-white;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  a {
+    color: $base-blue;
+    text-decoration: none;
+    font-family: $base-font-family;
+  }
+
+  img {
+    width: 15*$base-pixel-size;
+    height: auto;
+    margin-top: 3*$base-pixel-size;
+  }
+
+  h1 {
+    font-size: 4*$base-pixel-size;
+    margin: 3*$base-pixel-size 0;
+  }
+
   .error-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 1*$base-pixel-size;
+    padding: $base-pixel-size;
     background-color: $error-message-color;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
   }
 
   .error-message-container,
@@ -20,50 +46,59 @@
     background-color: #44998F;
   }
 
-  .form-content {
-    margin-top: 10*$base-pixel-size;
-    width: 50%;
-    background-color: #FFF;
-  }
+  .content-container {
+    width: 25%;
+    background-color: $base-background;
+    padding: $base-pixel-size 2*$base-pixel-size;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
 
-  h1 {
-    margin-bottom: 5*$base-pixel-size;
-  }
 
-  .form-input-wrapper {
-    margin-bottom: 3*$base-pixel-size;
-  }
-
-  .input-container {
     .form-input-wrapper {
+      margin-bottom: 3*$base-pixel-size;
+    }
+
+    .input-container {
+
+      .form-input-wrapper {
+        margin-bottom: $base-pixel-size;
+      }
+
+      .input-validator {
+        margin-bottom: 3*$base-pixel-size;
+
+        img {
+          margin-right: $base-pixel-size;
+          height: 10px;
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+          color: #44998F;
+          margin-bottom: $base-pixel-size*0.5;
+
+          &.error {
+            color: $error-message-color;
+          }
+
+        }
+
+      }
+
+    }
+
+    .form-checkbox-wrapper {
+      display: flex;
+      align-items: center;
       margin-bottom: $base-pixel-size;
     }
 
-    .input-validator {
-      margin-bottom: 3*$base-pixel-size;
-
-      img {
-        margin-right: $base-pixel-size;
-        height: 10px;
-      }
-
-      p {
-        display: flex;
-        align-items: center;
-        color: #44998F;
-        margin-bottom: $base-pixel-size*0.5;
-
-        &.error {
-          color: $error-message-color;
-        }
-      }
-    }
   }
 
   .button-wrapper {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 5*$base-pixel-size;
-    margin-bottom: 10*$base-pixel-size;
+    justify-content: center;
   }
+
 }

@@ -3,6 +3,8 @@ import IInputValidatorMessages from "./IInputValidatorMessages";
 export default interface IValidators {
     email: IInputValidatorMessages[] | [];
     password: IInputValidatorMessages[] | [];
-    name: IInputValidatorMessages[] | [];
-    lastname: IInputValidatorMessages[] | [];
+    firstName: IInputValidatorMessages[] | [];
+    lastName: IInputValidatorMessages[] | [];
+    phoneNumber: IInputValidatorMessages[] | [];
+    birthday: IInputValidatorMessages[] | [];
 }

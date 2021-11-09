@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import TicIcon from 'Assets/Icons/tic.svg';
 import ErrorInformation from '../ErrorInformation';
 import Header from './Components/Header';
 import ICheckbox from './Types/ICheckbox';
@@ -36,7 +35,7 @@ const FormCheckbox = ({isRequired, header, value, onChange, errorMessage}: IChec
             <div className="checkbox-content-container">
                 <Header title={header} onClick={onClick}/>
                 <div className={`checkbox ${value ? 'selected' : ''}`} onClick={onClick}>
-                    {value && <img src={TicIcon} alt="checked"/>}
+                    {value && <p>X</p>}
                 </div>
             </div>
             <ErrorInformation errorMessage={errorInformation}/>

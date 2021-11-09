@@ -12,6 +12,7 @@ import MessageToTheUser from "./Components/MessageToTheUser";
 import IMessageToTheUser from "../Register/Types/IMessageToTheUser";
 import checkIfCanLogIn from "./Functions/checkIfCanLogIn";
 import "./Styles/Login.scss";
+import Footer from "../../../Components/Footer";
 
 const Login = (): JSX.Element => {
     const {loginUser} = useContext(TokenContext);
@@ -91,50 +92,53 @@ const Login = (): JSX.Element => {
 
     return (
         <div className="login-page-wrapper" ref={userMessageRef}>
+
             <div className="top">
-                <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="logo"/>
+                <Link to="/login">
+                    <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="logo"/>
+                </Link>
                 <h1>Sign in to Virtual Dormitory</h1>
                 <p>
-                    By continuing, you agree to our <Link to={"/terms"}>User Agreement</Link> and <Link to="/privacy">Privacy Policy</Link>
+                    By continuing, you agree to our{" "}
+                    <Link to={"/terms"}>User Agreement</Link>
+                    {" "}and{" "}
+                    <Link to="/privacy">Privacy Policy</Link>
                 </p>
             </div>
+
             <MessageToTheUser {...messageToTheUser} />
+
             <div className="content-container">
-                <div className="form">
-                    <div className="input-container">
-                        <FormInput
-                            value={email}
-                            onChange={value => goThroughValidators('email', value)}
-                            type={EInputTypes.TEXT}
-                            header="Email"
-                        />
-                    </div>
-                    <div className="input-container">
-                        <FormInput
-                            value={password}
-                            onChange={value => goThroughValidators('password', value)}
-                            type={EInputTypes.PASSWORD}
-                            header="Password"
-                            headerChildren={forgotPasswordHeader}
-                        />
-                    </div>
-                    <Button
-                        onClick={onLoginIn}
-                        type={EButtonTypeList.PRIMARY}
-                        value="Login"
+                <div className="input-container">
+                    <FormInput
+                        value={email}
+                        onChange={value => goThroughValidators('email', value)}
+                        type={EInputTypes.TEXT}
+                        header="Email"
                     />
                 </div>
+                <div className="input-container">
+                    <FormInput
+                        value={password}
+                        onChange={value => goThroughValidators('password', value)}
+                        type={EInputTypes.PASSWORD}
+                        header="Password"
+                        headerChildren={forgotPasswordHeader}
+                    />
+                </div>
+                <Button
+                    type={EButtonTypeList.PRIMARY}
+                    onClick={onLoginIn}
+                    value="Login"
+                />
             </div>
             <div className="additional-info">
                 <p>Don’t have an account yet?</p>
                 <Link to="/register">Create an account</Link>
             </div>
-            <div className="login-menu-list">
-                <Link to='/about'>About</Link>
-                <Link to='/terms'>Terms</Link>
-                <Link to='/privacy'>Privacy</Link>
-                <Link to='/faq'>FAQ</Link>
-            </div>
+
+            <Footer/>
+
         </div>
     );
 };

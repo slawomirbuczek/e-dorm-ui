@@ -66,6 +66,7 @@ const FormInput = ({
                     placeholder={placeholder}
                     onBlur={onBlurChangeBorderStyle}
                     onKeyPress={onKeyPress}
+                    autoComplete="new-password"
                 />
             </div>
             <ErrorInformation errorMessage={errorInformation}/>

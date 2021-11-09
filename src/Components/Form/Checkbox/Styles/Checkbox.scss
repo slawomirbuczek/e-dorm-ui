@@ -20,15 +20,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #D4E2EA;
+      background-color: $base-foreground;
+      border: 1px solid $base-border;
       cursor: pointer;
+      font-size: 3*$base-pixel-size;
+      font-family: $base-bold-font-family;
 
       &:hover {
         border-color: #7E94A2;
       }
 
       &.selected {
-        background-color: #F2F7FA;
         border-color: #3D8EBB;
       }
     }
