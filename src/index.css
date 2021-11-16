@@ -13,6 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
+    color: #cacecf;
 }
 
 .main-app-wrapper,
@@ -22,17 +23,5 @@
     display: flex;
     flex-direction: column;
     background-color: #2c2c2c;
-}
 
-.main-app-wrapper-authenticated {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-}
-
-.page-wrapper-authenticated {
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #F8F9FA;
 }

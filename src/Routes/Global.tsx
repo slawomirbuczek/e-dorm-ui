@@ -5,7 +5,7 @@ import Privacy from 'Pages/Global/Privacy';
 import Register from 'Pages/Global/Register';
 import Terms from 'Pages/Global/Terms';
 import React from 'react';
-import {Route, Switch} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 
 const GlobalRoutes = () => (
     <>
@@ -16,7 +16,9 @@ const GlobalRoutes = () => (
             <Route exact path="/terms" component={Terms}/>
             <Route exact path="/privacy" component={Privacy}/>
             <Route exact path="/faq" component={Faq}/>
-            <Route path="*" component={() => <h1>not found</h1>}/>
+            <Route path="*">
+                <Link to="/login"/>
+            </Route>
         </Switch>
     </>
 );

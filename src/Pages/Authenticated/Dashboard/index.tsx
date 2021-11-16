@@ -1,10 +1,11 @@
 import React from 'react';
+import './Styles/Dashboard.scss'
 
 const Dashboard = (): JSX.Element => {
 
     return (
-        <div>
-            <h1>Dashboard Page</h1>
+        <div className="dashboard-wrapper">
+            <h1>Dashboard</h1>
         </div>
     );
 };

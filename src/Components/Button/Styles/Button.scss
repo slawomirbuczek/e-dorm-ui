@@ -1,16 +1,19 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .button-wrapper {
+
   button {
+    font-family: $base-font-family;
     font-size: 2*$base-pixel-size;
-    padding: $base-pixel-size 5*$base-pixel-size;
     cursor: pointer;
+    color: $base-white;
+
 
     &.primary {
       background-color: $base-foreground;
       border-radius: $base-pixel-size;
       border-color: rgba(44, 44, 44, 0);
-      color: $base-white;
+      padding: $base-pixel-size 5*$base-pixel-size;
 
       &:hover {
         background-color: $base-blue;
@@ -26,6 +29,65 @@
         background-color: #F2F7FA;
         border-color: #F2F7FA;
       }
+    }
+
+    &.navbar {
+      background-color: transparent;
+      border: none;
+      font-size: 4*$base-pixel-size;
+      font-weight: bold;
+      padding: $base-pixel-size 5*$base-pixel-size;
+
+
+      &:hover {
+        background-color: $base-blue;
+        border-color: rgba(44, 44, 44, 0);
+      }
+
+      &:active {
+        background-color: $base-blue;
+        border-color: rgba(44, 44, 44, 0);
+      }
+
+      &:disabled {
+        background-color: #F2F7FA;
+        border-color: #F2F7FA;
+      }
+    }
+
+    &.image-primary {
+      background-color: $base-background;
+      border: none;
+
+
+      img {
+
+      }
+
+    }
+
+    &.image-profile-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-weight: bold;
+      background-color: $base-background;
+      height: 6*$base-pixel-size;
+      width: 20*$base-pixel-size;
+      border: 2px solid $base-border;
+      border-radius: 0;
+
+      img {
+        margin-left: 2*$base-pixel-size;
+        margin-right: 1*$base-pixel-size;
+        height: 5*$base-pixel-size;
+        width: 5*$base-pixel-size;
+      }
+
+      &:hover {
+        background-color: $base-blue;
+      }
+
     }
 
   }

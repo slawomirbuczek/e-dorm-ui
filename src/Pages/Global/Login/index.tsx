@@ -52,7 +52,7 @@ const Login = (): JSX.Element => {
             });
         }
 
-        return history.push('/home');
+        return history.push('/dashboard');
     };
 
     const onLoginIn = async () => {

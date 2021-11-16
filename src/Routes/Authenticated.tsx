@@ -1,18 +1,15 @@
 import Dashboard from 'Pages/Authenticated/Dashboard';
-import About from 'Pages/Global/About';
-import Faq from 'Pages/Global/Faq';
-import Privacy from 'Pages/Global/Privacy';
-import Terms from 'Pages/Global/Terms';
-import {Route, Switch} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
+import Forum from "../Pages/Authenticated/Forum";
+import React from "react";
 
 const Authenticated = () => (
     <Switch>
         <Route exact path="/dashboard" component={Dashboard}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/terms" component={Terms}/>
-        <Route exact path="/privacy" component={Privacy}/>
-        <Route exact path="/faq" component={Faq}/>
-        <Route path="*" component={() => <h1>not found</h1>}/>
+        <Route exact path="/forum" component={Forum}/>
+        <Route path="*">
+            <Link to="/dashboard"/>
+        </Route>
     </Switch>
 );
 

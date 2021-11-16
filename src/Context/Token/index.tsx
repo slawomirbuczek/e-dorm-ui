@@ -13,7 +13,7 @@ const setTokenToTheAxiosConfig = (token?: string | null) => {
         return null;
     }
 
-    return axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    return axiosInstance.defaults.headers.common['Authorization'] = token;
 };
 
 const checkLoginStatus = (): boolean => {
@@ -28,12 +28,6 @@ export const UseToken = ({children}: IUseToken): JSX.Element => {
     const [isLoggedIn, setLoginStatus] = useState<boolean>(checkLoginStatus());
 
     const logoutUser = async () => {
-        const {ok} = await sendRequest(EApiMethods.GET, '/logout');
-
-        if (!ok) {
-            return null;
-        }
-
         localStorage.removeItem('token');
 
         setLoginStatus(false);
@@ -53,7 +47,7 @@ export const UseToken = ({children}: IUseToken): JSX.Element => {
             };
         }
 
-        axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        axiosInstance.defaults.headers.common['Authorization'] = token;
 
         localStorage.setItem('token', token);
 

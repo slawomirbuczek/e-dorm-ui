@@ -1,10 +1,8 @@
 enum EButtonTypeList {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    GHOST_BLUE = 'ghost-blue',
-    GHOST_DARK = 'ghost-dark',
     IMAGE_PRIMARY = 'image-primary',
-    IMAGE_SECONDARY = 'image-secondary'
+    NAVBAR = 'navbar',
+    IMAGE_PROFILE_LIST = "image-profile-list"
 }
 
 export default EButtonTypeList;
