@@ -1,0 +1,54 @@
+@import "src/Utils/Styles/variables.scss";
+
+.post-wrapper {
+  color: $base-white;
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  gap: 5*$base-pixel-size;
+  width: 100%;
+
+
+  .photo {
+    width: 10*$base-pixel-size;
+    height: 10*$base-pixel-size;
+    margin-top: 1*$base-pixel-size;
+  }
+
+  .post-content {
+
+
+    .username {
+      font-weight: bold;
+      margin-top: $base-pixel-size;
+      font-size: 3*$base-pixel-size;
+      padding-bottom: 4px;
+      border-bottom: 1px solid white;
+      margin-bottom: 4px;
+    }
+
+    .content {
+      word-break: break-all;
+    }
+
+    .image {
+      width: 50*$base-pixel-size;
+      height: auto;
+      margin-top: 3*$base-pixel-size;
+    }
+
+  }
+
+  .post-info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .edited,
+    .date {
+      font-style: italic;
+      text-align: right
+    }
+  }
+
+}

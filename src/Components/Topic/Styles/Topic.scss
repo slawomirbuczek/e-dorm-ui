@@ -1,0 +1,19 @@
+@import "src/Utils/Styles/variables.scss";
+
+.topic-wrapper {
+  display: block;
+  width: 95%;
+  height: fit-content;
+  background-color: $base-background;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  border: 1px solid $base-border;
+  margin-top: $base-pixel-size;
+
+  .responses-container {
+    margin-top: 2*$base-pixel-size;
+    margin-left: 12*$base-pixel-size;
+  }
+
+}
+

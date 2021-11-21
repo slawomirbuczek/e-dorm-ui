@@ -1,7 +1,11 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .forum-wrapper {
-
+  font-family: $base-font-family;
+  margin-left: 2*$base-pixel-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
