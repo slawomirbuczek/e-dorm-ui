@@ -1,0 +1,15 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.dashboard-info-wrapper {
+  position: absolute;
+  right: 10*$base-pixel-size;
+  height: 50*$base-pixel-size;
+
+  p {
+    margin-top: 3*$base-pixel-size;
+  }
+
+  img {
+    height: 3*$base-pixel-size;
+  }
+}

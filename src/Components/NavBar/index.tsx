@@ -35,7 +35,7 @@ const NavBar = () => {
     }, [isLoggedIn]);
 
     const updateUserData = async () => {
-        const userData = await sendRequest(EApiMethods.GET, '/users');
+        const userData = await sendRequest(EApiMethods.GET, 'users/self');
 
         if (!userData) {
             return null;
@@ -54,13 +54,15 @@ const NavBar = () => {
     return (
         <div className="nav-bar-wrapper">
             <div className="nav-bar-container">
-                <Button
-                    onClick={() => history.push('/dashboard')}
-                    type={EButtonTypeList.IMAGE_PRIMARY}
-                    image={dormitory}
-                    imageDescription="dashboard"
-                    value="Virtual Dormitory"
-                />
+                <div className="logo">
+                    <Button
+                        onClick={() => history.push('/dashboard')}
+                        type={EButtonTypeList.IMAGE_PRIMARY}
+                        image={dormitory}
+                        imageDescription="dashboard"
+                        value=""
+                    />
+                </div>
                 <Button
                     onClick={() => history.push('/forum')}
                     type={EButtonTypeList.IMAGE_PRIMARY}

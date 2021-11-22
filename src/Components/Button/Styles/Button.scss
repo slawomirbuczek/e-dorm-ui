@@ -59,37 +59,13 @@
       background-color: transparent;
       border: none;
       align-items: center;
-      font-size: 4*$base-pixel-size;
+      font-size: 5*$base-pixel-size;
       font-weight: bold;
       padding: $base-pixel-size 5*$base-pixel-size;
 
 
       img {
 
-      }
-
-    }
-
-    &.image-profile-list {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-weight: bold;
-      background-color: $base-background;
-      height: 6*$base-pixel-size;
-      width: 20*$base-pixel-size;
-      border: 2px solid $base-border;
-      border-radius: 0;
-
-      img {
-        margin-left: 2*$base-pixel-size;
-        margin-right: 1*$base-pixel-size;
-        height: 5*$base-pixel-size;
-        width: 5*$base-pixel-size;
-      }
-
-      &:hover {
-        background-color: $base-blue;
       }
 
     }

@@ -6,6 +6,10 @@
   height: 12*$base-pixel-size;
   background-color: $base-background;
 
+  img {
+    height: 5*$base-pixel-size;
+  }
+
   .nav-bar-container {
     display: flex;
     flex-direction: row;
@@ -13,6 +17,14 @@
 
     .button-wrapper {
       margin-left: 5px;
+    }
+
+    .logo {
+      margin-top: 1*$base-pixel-size;
+      img {
+        padding: 0.5*$base-pixel-size;
+        height: 12*$base-pixel-size;
+      }
     }
 
     .nav-bar-right {
@@ -31,10 +43,6 @@
     }
 
 
-  }
-
-  img {
-    height: 5*$base-pixel-size;
   }
 
 }

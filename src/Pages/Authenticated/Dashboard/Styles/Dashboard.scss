@@ -1,6 +1,25 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .dashboard-wrapper {
+  height: calc(100vh - 150px);
+  display: flex;
+  color: $base-white;
+  font-family: $base-font-family;
+  margin-top: 6*$base-pixel-size;
+
+  iframe {
+    width: 300px;
+    height: 600px;
+    margin-left: 12*$base-pixel-size;
+    border: none;
+  }
+
+  h2 {
+    height: fit-content;
+    padding: 5px;
+    margin-left: 2*$base-pixel-size;
+    font-size: 40px;
+  }
 
 }
 
