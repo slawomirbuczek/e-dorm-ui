@@ -7,18 +7,27 @@
   font-family: $base-font-family;
   margin-top: 6*$base-pixel-size;
 
-  iframe {
-    width: 300px;
-    height: 600px;
-    margin-left: 12*$base-pixel-size;
-    border: none;
-  }
+  .dashboard-container {
 
-  h2 {
-    height: fit-content;
-    padding: 5px;
-    margin-left: 2*$base-pixel-size;
-    font-size: 40px;
+    display: grid;
+    grid-template-columns: 400px 1fr 330px;
+    gap: 5*$base-pixel-size;
+    width: 100%;
+
+    iframe {
+      width: 300px;
+      height: 600px;
+      margin-left: 12*$base-pixel-size;
+      border: none;
+    }
+
+    h2 {
+      height: fit-content;
+      padding: 5px;
+      margin-left: 2*$base-pixel-size;
+      font-size: 40px;
+    }
+
   }
 
 }

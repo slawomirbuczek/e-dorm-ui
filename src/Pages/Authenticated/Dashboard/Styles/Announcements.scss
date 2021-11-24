@@ -1,0 +1,39 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.announcements-wrapper {
+  margin-top: 10px;
+
+  .announcements-container {
+    background-color: $base-background;
+    padding: $base-pixel-size 2*$base-pixel-size;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-border;
+
+    .header {
+      text-align: center;
+      padding-bottom: 6px;
+      border-bottom: 2px solid white;
+      margin-bottom: 6px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .announcement {
+      padding-bottom: 4px;
+      border-bottom: 1px solid white;
+      margin-bottom: 4px;
+
+      .subject {
+        text-align: center;
+      }
+
+      .date {
+        text-align: right;
+      }
+
+    }
+
+  }
+
+
+}
