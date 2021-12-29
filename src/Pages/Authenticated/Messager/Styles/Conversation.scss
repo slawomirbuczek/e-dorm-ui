@@ -1,0 +1,27 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.conversation-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 10*$base-pixel-size;
+  width: 40*$base-pixel-size;
+  padding: $base-pixel-size;
+  border-bottom: 0.25*$base-pixel-size solid $base-background;
+  margin-bottom: $base-pixel-size;
+
+  img {
+    height: 10*$base-pixel-size;
+    padding: $base-pixel-size;
+  }
+
+  p {
+    font-size: 20px;
+    font-family: $base-font-family;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

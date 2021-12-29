@@ -29,7 +29,6 @@ const Announcements = (): JSX.Element => {
             return null;
         }
 
-        console.log(response);
         return setAnnouncements(response);
     };
 

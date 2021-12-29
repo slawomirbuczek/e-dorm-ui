@@ -1,4 +1,4 @@
-@import "src/Utils/Styles/variables.scss";
+@import "src/Utils/Styles/variables";
 
 .post-wrapper {
   color: $base-white;
@@ -22,7 +22,7 @@
       margin-top: $base-pixel-size;
       font-size: 3*$base-pixel-size;
       padding-bottom: 4px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $base-background;
       margin-bottom: 4px;
     }
 

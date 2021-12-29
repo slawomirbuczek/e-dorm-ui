@@ -10,7 +10,7 @@ const Button = (props: IButton) => {
         <div className="button-wrapper">
             <button onClick={onClick} disabled={disabled} className={type}>
                 <ImageDisplay {...props}/>
-                {value}
+                <p>{value}</p>
             </button>
         </div>
     );

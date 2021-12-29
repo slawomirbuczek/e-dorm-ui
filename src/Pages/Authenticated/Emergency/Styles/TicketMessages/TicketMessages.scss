@@ -1,0 +1,10 @@
+@import 'src/Utils/Styles/variables';
+
+.ticket-messages-content {
+  height: 95*$base-pixel-size;
+  margin: $base-pixel-size;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+}

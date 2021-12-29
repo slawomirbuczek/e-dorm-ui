@@ -1,0 +1,10 @@
+@import 'src/Utils/Styles/variables';
+
+.tickets-wrapper {
+  padding-right: $base-pixel-size;
+  height: 71%;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: $base-pixel-size;
+
+}

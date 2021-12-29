@@ -1,0 +1,24 @@
+@import 'src/Utils/Styles/variables';
+
+.ticket-message {
+  margin-top: $base-pixel-size;
+  width: fit-content;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  background-color: $base-background;
+
+  &.self {
+    align-self: flex-end;
+    text-align: end;
+    margin-right: $base-pixel-size;
+  }
+
+  &.user {
+    display: inline-block;
+  }
+
+  .date {
+    font-style: italic;
+  }
+
+}

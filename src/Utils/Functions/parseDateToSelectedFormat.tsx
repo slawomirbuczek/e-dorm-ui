@@ -7,6 +7,7 @@ const parseDateToSelectedFormat = (date: Date, format: EParseDateMethods): strin
 
     const hours = checkNumberValue(newDate.getHours());
     const minutes = checkNumberValue(newDate.getMinutes());
+    const seconds = checkNumberValue(newDate.getSeconds());
 
     const year = newDate.getFullYear();
     const month = checkNumberValue(newDate.getMonth() + 1);
@@ -24,6 +25,8 @@ const parseDateToSelectedFormat = (date: Date, format: EParseDateMethods): strin
         return `${day} ${monthName} ${year}`;
     } else if (format === EParseDateMethods.YYYY_MM_DD) {
         return `${year}-${month}-${day}`;
+    } else if (format === EParseDateMethods.HHMMSS_DD_MM_YYYY) {
+        return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`;
     }
 
     return '';

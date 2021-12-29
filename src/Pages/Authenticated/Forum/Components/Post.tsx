@@ -1,7 +1,7 @@
 import React from "react";
 import IPost from "../Types/IPost";
 import '../Styles/Post.scss';
-import getImageFromResponse from "../../../Utils/Functions/getImageFromResponse";
+import getImageFromResponse from "../../../../Utils/Functions/getImageFromResponse";
 
 const Post = ({post}: IPost) => {
     const {id, photo, fullName, date, content, image, edited} = post;

@@ -1,0 +1,18 @@
+@import 'src/Utils/Styles/variables.scss';
+
+label {
+
+  p {
+    margin-bottom: $base-pixel-size;
+  }
+
+  select {
+    border: 1.5px solid $base-border;
+    border-radius: 4px;
+    height: 4*$base-pixel-size;
+    background-color: $base-foreground;
+    font-size: 2*$base-pixel-size;
+    margin-bottom: 2*$base-pixel-size;
+  }
+
+}

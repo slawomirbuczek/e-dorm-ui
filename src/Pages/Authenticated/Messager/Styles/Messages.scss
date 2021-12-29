@@ -1,0 +1,77 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.messages-wrapper {
+  width: 99%;
+
+  .messages-content {
+    height: 95*$base-pixel-size;
+    margin: $base-pixel-size;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    .message {
+      margin-top: 4px;
+      width: fit-content;
+      padding: $base-pixel-size 2*$base-pixel-size;
+      border-radius: 2*$base-pixel-size;
+      background-color: $base-background;
+
+      &.self {
+        align-self: flex-end;
+        text-align: end;
+        margin-right: 2px;
+      }
+
+      &.user {
+        display: inline-block;
+      }
+
+      .date {
+        font-style: italic;
+      }
+
+    }
+
+  }
+
+  .messages-new-message {
+    display: flex;
+    align-items: center;
+    background-color: $base-background;
+    height: 8.4*$base-pixel-size;
+
+    .input-file {
+      margin-left: 3*$base-pixel-size;
+
+      img {
+        height: 4*$base-pixel-size;
+        cursor: pointer;
+      }
+
+      input {
+        display: none;
+      }
+
+    }
+
+    .input-content {
+      margin-left: 3*$base-pixel-size;
+      width: 93%;
+
+      input {
+        width: 100%;
+        height: 5*$base-pixel-size;
+        background-color: $base-foreground;
+        padding: $base-pixel-size 2*$base-pixel-size;
+        border-radius: 2*$base-pixel-size;
+        border: 1px solid $base-white;
+
+      }
+
+    }
+
+  }
+
+}

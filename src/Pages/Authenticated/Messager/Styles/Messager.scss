@@ -1,0 +1,16 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.messager-wrapper {
+  height: calc(100vh - 97px);
+  display: flex;
+
+
+  .messager-conversations {
+    width: 40*$base-pixel-size;
+    height: 100%;
+    border-right: 4px solid $base-background;
+
+  }
+
+
+}

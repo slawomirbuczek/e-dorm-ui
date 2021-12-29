@@ -1,4 +1,4 @@
-import IContent from "../../../../Components/Topic/Types/IContent";
+import IContent from "./IContent";
 
 export default interface IForum {
     topic: IContent;

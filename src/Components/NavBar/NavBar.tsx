@@ -86,14 +86,14 @@ const NavBar = () => {
                 />
                 <div className="nav-bar-right">
                     <Button
-                        onClick={() => history.push('/emergency')}
+                        onClick={() => history.push('/tickets')}
                         type={EButtonTypeList.IMAGE_PRIMARY}
                         image={emergency}
-                        imageDescription="emergency"
+                        imageDescription="tickets"
                         value=""
                     />
                     <Button
-                        onClick={() => history.push('/message')}
+                        onClick={() => history.push('/messager')}
                         type={EButtonTypeList.IMAGE_PRIMARY}
                         image={message}
                         imageDescription="messages"

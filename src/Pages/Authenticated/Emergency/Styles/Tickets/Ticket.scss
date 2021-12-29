@@ -1,0 +1,16 @@
+@import 'src/Utils/Styles/variables';
+
+.ticket-wrapper {
+  margin-bottom: $base-pixel-size;
+  cursor: pointer;
+  background-color: $base-background;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  border: 1px solid $base-border;
+
+  &.selected {
+    border: 2px solid $base-blue;
+  }
+
+}
+

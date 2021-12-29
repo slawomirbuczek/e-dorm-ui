@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Redirect, Switch} from "react-router-dom";
 import ScrollToTop from 'Utils/Functions/ScrollToTop';
 import GlobalRoutes from './Global';
 import Authenticated from "./Authenticated";
-import NavBar from "../Components/NavBar";
+import NavBar from "../Components/NavBar/NavBar";
 
 const AppRoutesHandler = () => {
     const {isLoggedIn} = useContext(TokenContext);

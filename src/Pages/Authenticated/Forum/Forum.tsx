@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Topic from "../../../Components/Topic";
+import Topic from "./Components/Topic";
 import EApiMethods from "../../../Utils/Types/EApiMethods";
 import sendRequest from "../../../Authentication/sendRequest";
 import './Styles/Forum.scss';

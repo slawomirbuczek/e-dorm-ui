@@ -1,0 +1,27 @@
+@import 'src/Utils/Styles/variables.scss';
+
+.emergency-wrapper {
+  font-family: $base-font-family;
+  height: calc(100vh - 97px);
+  display: flex;
+  flex-direction: row;
+
+  .emergency-tickets {
+    height: 100%;
+    width: 30%;
+
+    .emergency-tickets-border {
+      border-top: 4px solid $base-background;
+    }
+
+  }
+
+  .emergency-ticket-messages {
+    height: 100%;
+    width: 70%;
+    border-left: 4px solid $base-background;
+  }
+
+}
+
+
