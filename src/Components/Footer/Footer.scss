@@ -1,17 +1,17 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .footer-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3*$base-pixel-size;
+  display: flex;
+  flex-direction: row;
+  margin-top: 3*$base-pixel-size;
 
-    a {
-        margin-right: 5*$base-pixel-size;
+  a {
+    margin-right: 5*$base-pixel-size;
 
-        &:last-child {
-            margin-right: 0;
-        }
-
+    &:last-child {
+      margin-right: 0;
     }
+
+  }
 
 }

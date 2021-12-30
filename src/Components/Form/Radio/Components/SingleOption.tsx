@@ -1,7 +1,7 @@
-import React from 'react';
-import IDefaultOptions from '../Types/IDefaultOptions';
-import IOptionsWithAdditionalContent from '../Types/IOptionsWithAdditionalContent';
-import ISingleOption from '../Types/ISingleOption';
+import React from 'react'
+import IDefaultOptions from '../Types/IDefaultOptions'
+import IOptionsWithAdditionalContent from '../Types/IOptionsWithAdditionalContent'
+import ISingleOption from '../Types/ISingleOption'
 
 const DefaultOptions = ({selectedValue, value, onChange, label}: IDefaultOptions) => (
     <>
@@ -10,7 +10,7 @@ const DefaultOptions = ({selectedValue, value, onChange, label}: IDefaultOptions
             {selectedValue === value && <div className="selected"/>}
         </div>
     </>
-);
+)
 
 const OptionsWithAdditionalContent = ({
                                           value,
@@ -28,11 +28,11 @@ const OptionsWithAdditionalContent = ({
         </div>
         {additionalContent}
     </>
-);
+)
 
 const SingleOption = ({options, selectedValue, onChange}: ISingleOption): JSX.Element | null => {
     if (!options || !options.length) {
-        return null;
+        return null
     }
 
     return (
@@ -57,7 +57,7 @@ const SingleOption = ({options, selectedValue, onChange}: ISingleOption): JSX.El
                 </div>
             ))}
         </>
-    );
-};
+    )
+}
 
-export default SingleOption;
+export default SingleOption

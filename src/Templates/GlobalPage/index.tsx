@@ -1,10 +1,10 @@
-import React, {MutableRefObject, ReactNode} from 'react';
-import './GlobalPageTemplate.scss';
+import React, {MutableRefObject, ReactNode} from 'react'
+import './GlobalPageTemplate.scss'
 
 interface IGlobalPageTemplate {
-    children: ReactNode;
-    reference?: MutableRefObject<HTMLDivElement | null>;
-    information: string;
+    children: ReactNode
+    reference?: MutableRefObject<HTMLDivElement | null>
+    information: string
 }
 
 const GlobalPageTemplate = ({children, reference, information}: IGlobalPageTemplate) => (
@@ -16,6 +16,6 @@ const GlobalPageTemplate = ({children, reference, information}: IGlobalPageTempl
             {children}
         </div>
     </div>
-);
+)
 
-export default GlobalPageTemplate;
+export default GlobalPageTemplate

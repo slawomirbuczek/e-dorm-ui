@@ -4,4 +4,4 @@ enum ETicketType {
     NETWORK = 'NETWORK'
 }
 
-export default ETicketType;
+export default ETicketType

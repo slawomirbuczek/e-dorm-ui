@@ -1,0 +1,16 @@
+@import 'src/Utils/Styles/variables';
+
+.messages-wrapper {
+  width: 99%;
+
+  .messages-content {
+    height: 95*$base-pixel-size;
+    margin: $base-pixel-size;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+  }
+
+}

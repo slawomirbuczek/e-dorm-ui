@@ -1,15 +1,25 @@
 @import 'src/Utils/Styles/variables';
 
 .new-ticket-wrapper {
-
   margin: $base-pixel-size;
-  background-color: $base-background;
   padding: $base-pixel-size 2*$base-pixel-size;
-  border-radius: 2*$base-pixel-size;
-  border: 1px solid $base-border;
+
+
+  .new-ticket-header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $base-pixel-size;
+  }
 
   .form-input-wrapper {
     margin-bottom: $base-pixel-size;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
 }

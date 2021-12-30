@@ -1,12 +1,13 @@
 @import 'src/Utils/Styles/variables.scss';
 
-label {
+.select-wrapper {;
 
   p {
     margin-bottom: $base-pixel-size;
   }
 
   select {
+    width: 100%;
     border: 1.5px solid $base-border;
     border-radius: 4px;
     height: 4*$base-pixel-size;

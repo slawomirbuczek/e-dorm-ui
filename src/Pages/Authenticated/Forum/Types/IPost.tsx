@@ -1,6 +1,6 @@
-import IContent from "./IContent";
+import IContent from "./IContent"
 
 export default interface IPost {
-    post: IContent;
+    post: IContent
 }
 

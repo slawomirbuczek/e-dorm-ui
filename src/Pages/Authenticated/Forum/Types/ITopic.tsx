@@ -1,6 +1,6 @@
-import IForum from "./IForum";
+import IForum from "./IForum"
 
 export default interface ITopic {
-    forum: IForum;
+    forum: IForum
 }
 

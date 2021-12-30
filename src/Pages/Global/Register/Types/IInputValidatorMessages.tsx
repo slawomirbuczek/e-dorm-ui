@@ -1,4 +1,4 @@
 export default interface IInputValidatorMessages {
-    status: boolean;
-    label: string;
+    status: boolean
+    label: string
 }

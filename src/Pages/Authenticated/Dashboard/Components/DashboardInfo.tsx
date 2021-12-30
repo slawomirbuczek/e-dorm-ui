@@ -1,7 +1,7 @@
-import call from "Assets/Images/call.png";
-import pin from "Assets/Images/pin.png";
-import React from "react";
-import '../Styles/DashboardInfo.scss';
+import call from "Assets/Images/call.png"
+import pin from "Assets/Images/pin.png"
+import React from "react"
+import '../Styles/DashboardInfo.scss'
 
 const DashboardInfo = (): JSX.Element => {
 
@@ -39,8 +39,8 @@ const DashboardInfo = (): JSX.Element => {
             <br/>
             31-866 Kraków
         </p>
-    </div>;
+    </div>
 
-};
+}
 
-export default DashboardInfo;
+export default DashboardInfo

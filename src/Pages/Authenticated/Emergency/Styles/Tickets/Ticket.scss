@@ -12,5 +12,20 @@
     border: 2px solid $base-blue;
   }
 
+  .ticket-header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $base-pixel-size;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: $base-pixel-size;
+    height: 60%;
+  }
+
 }
 

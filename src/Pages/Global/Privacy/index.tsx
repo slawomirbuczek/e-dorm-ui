@@ -1,16 +1,16 @@
-import Button from 'Components/Button';
-import EButtonTypeList from 'Components/Button/Types/EButtonTypeList';
-import React from 'react';
-import {useHistory} from 'react-router';
-import GlobalPageTemplate from 'Templates/GlobalPage';
-import './Styles/Privacy.scss';
+import Button from 'Components/Button'
+import EButtonTypeList from 'Components/Button/Types/EButtonTypeList'
+import React from 'react'
+import {useHistory} from 'react-router'
+import GlobalPageTemplate from 'Templates/GlobalPage'
+import './Styles/Privacy.scss'
 
 const Privacy = () => {
-    const history = useHistory();
+    const history = useHistory()
 
     const goBack = () => {
-        return history.goBack();
-    };
+        return history.goBack()
+    }
 
     return (
         <GlobalPageTemplate information="Privacy Policy">
@@ -22,7 +22,7 @@ const Privacy = () => {
                 />
             </div>
         </GlobalPageTemplate>
-    );
-};
+    )
+}
 
-export default Privacy;
+export default Privacy

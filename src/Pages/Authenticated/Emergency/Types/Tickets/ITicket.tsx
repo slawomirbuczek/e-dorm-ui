@@ -1,10 +1,10 @@
-import ETicketType from "./ETicketType";
+import ETicketType from "./ETicketType"
 
 export default interface ITicket {
-    id: number;
-    createDate: string;
-    type: ETicketType;
-    subject: string;
-    open: boolean;
+    id: number
+    createDate: string
+    type: ETicketType
+    subject: string
+    open: boolean
 }
 

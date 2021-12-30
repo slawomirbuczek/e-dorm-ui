@@ -1,2 +1,2 @@
-export const appName = 'Virtual Dormitory';
-export const appShortcutName = 'VD';
+export const appName = 'Virtual Dormitory'
+export const appShortcutName = 'VD'

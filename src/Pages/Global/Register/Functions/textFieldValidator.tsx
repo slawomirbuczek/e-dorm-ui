@@ -1,21 +1,21 @@
-import IInputValidatorMessages from "../Types/IInputValidatorMessages";
+import IInputValidatorMessages from "../Types/IInputValidatorMessages"
 
 const textFieldValidator = (key: string, value: string) => {
-    const requirementsArray: IInputValidatorMessages[] = [];
+    const requirementsArray: IInputValidatorMessages[] = []
 
-    const textFieldRegex = /^[a-z ,.'-]+$/i;
+    const textFieldRegex = /^[a-z ,.'-]+$/i
 
     requirementsArray.push({
         label: 'At least 3 characters',
         status: value.length >= 3
-    });
+    })
 
     requirementsArray.push({
         label: `Correct ${key} value`,
         status: textFieldRegex.test(value)
-    });
+    })
 
-    return requirementsArray;
-};
+    return requirementsArray
+}
 
-export default textFieldValidator;
+export default textFieldValidator

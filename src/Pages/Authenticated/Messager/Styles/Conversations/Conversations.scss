@@ -1,0 +1,8 @@
+@import 'src/Utils/Styles/variables';
+
+.conversations-wrapper {
+  padding-right: $base-pixel-size;
+  height: 71%;
+  overflow-y: scroll;
+  margin: $base-pixel-size;
+}

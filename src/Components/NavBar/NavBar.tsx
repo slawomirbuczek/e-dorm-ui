@@ -1,55 +1,55 @@
-import React, {useContext, useEffect, useState} from 'react';
-import Button from "../Button";
-import EButtonTypeList from "../Button/Types/EButtonTypeList";
-import {useHistory} from "react-router";
-import './Styles/NavBar.scss';
-import IUserBasicInfo from "./Types/IUserBasicInfo";
-import sendRequest from "../../Authentication/sendRequest";
-import EApiMethods from "../../Utils/Types/EApiMethods";
-import {TokenContext} from "../../Context/Token";
-import message from "Assets/Images/message.png";
-import emergency from "Assets/Images/emergency.png";
-import dormitory from "Assets/Images/dormitory.png";
-import reservation from "Assets/Images/reservation.png";
-import forum from "Assets/Images/forum.png";
-import room from "Assets/Images/room.png";
-import settings from "Assets/Images/setting.png";
-import logout from "Assets/Images/logout.png";
-import getImageFromResponse from "../../Utils/Functions/getImageFromResponse";
+import React, {useContext, useEffect, useState} from 'react'
+import Button from "../Button"
+import EButtonTypeList from "../Button/Types/EButtonTypeList"
+import {useHistory} from "react-router"
+import './Styles/NavBar.scss'
+import IUserBasicInfo from "./Types/IUserBasicInfo"
+import sendRequest from "../../Authentication/sendRequest"
+import EApiMethods from "../../Utils/Types/EApiMethods"
+import {TokenContext} from "../../Context/Token"
+import message from "Assets/Images/message.png"
+import emergency from "Assets/Images/emergency.png"
+import dormitory from "Assets/Images/dormitory.png"
+import reservation from "Assets/Images/reservation.png"
+import forum from "Assets/Images/forum.png"
+import room from "Assets/Images/room.png"
+import settings from "Assets/Images/setting.png"
+import logout from "Assets/Images/logout.png"
+import getImageFromResponse from "../../Utils/Functions/getImageFromResponse"
 
 const NavBar = () => {
-    const history = useHistory();
-    const {isLoggedIn} = useContext(TokenContext);
-    const [userBasicInfo, setUserBasicInfo] = useState<IUserBasicInfo | null>(null);
+    const history = useHistory()
+    const {isLoggedIn} = useContext(TokenContext)
+    const [userBasicInfo, setUserBasicInfo] = useState<IUserBasicInfo | null>(null)
 
     useEffect(() => {
         const getUserData = async () => {
             if (!isLoggedIn) {
-                return null;
+                return null
             }
 
-            return updateUserData();
-        };
-
-        getUserData();
-    }, [isLoggedIn]);
-
-    const updateUserData = async () => {
-        const userData = await sendRequest(EApiMethods.GET, 'users/self');
-
-        if (!userData) {
-            return null;
+            return updateUserData()
         }
 
-        return setUserBasicInfo(userData);
-    };
+        getUserData()
+    }, [isLoggedIn])
 
-    const {logoutUser} = useContext(TokenContext);
+    const updateUserData = async () => {
+        const userData = await sendRequest(EApiMethods.GET, 'users/self')
+
+        if (!userData) {
+            return null
+        }
+
+        return setUserBasicInfo(userData)
+    }
+
+    const {logoutUser} = useContext(TokenContext)
 
     const onClickLogout = () => {
-        logoutUser && logoutUser();
-        history.push("/login");
-    };
+        logoutUser && logoutUser()
+        history.push("/login")
+    }
 
     return (
         <div className="nav-bar-wrapper">
@@ -122,7 +122,7 @@ const NavBar = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default NavBar;
+export default NavBar

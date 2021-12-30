@@ -1,44 +1,44 @@
-import ITicketsProps from "../../Types/Tickets/ITicketsProps";
-import Ticket from "./Ticket";
-import "../../Styles/Tickets/Tickets.scss";
-import {useEffect, useState} from "react";
-import sendRequest from "../../../../../Authentication/sendRequest";
-import EApiMethods from "../../../../../Utils/Types/EApiMethods";
-import ITicket from "../../Types/Tickets/ITicket";
+import "../../Styles/Tickets/Tickets.scss"
+import ITicketsProps from "../../Types/Tickets/ITicketsProps"
+import Ticket from "./Ticket"
+import {useEffect, useState} from "react"
+import sendRequest from "../../../../../Authentication/sendRequest"
+import EApiMethods from "../../../../../Utils/Types/EApiMethods"
+import ITicket from "../../Types/Tickets/ITicket"
 
-const Tickets = ({onClick}: ITicketsProps) => {
-    const [selectedTicket, setSelectedTicket] = useState<number>(-1);
-    const [tickets, setTickets] = useState<ITicket[] | null>(null);
-
-    const handleOnClick = (ticketId: number) => {
-        onClick(ticketId);
-        setSelectedTicket(ticketId);
-    }
+const Tickets = ({ticketId, onTicketSelected}: ITicketsProps) => {
+    const [tickets, setTickets] = useState<ITicket[]>([])
 
     useEffect(() => {
-        getData();
-    }, []);
+        getTickets()
+    }, [ticketId])
 
-    const getData = async () => {
-        const result = await sendRequest(EApiMethods.GET, '/tickets');
-        return setTickets(result);
-    };
+    const getTickets = async () => {
+        const result = await sendRequest(EApiMethods.GET, '/tickets')
+        setTickets(result)
+    }
+
+    const handleOnTicketClosed = (closedTicketId: number) => {
+        getTickets()
+        onTicketSelected(closedTicketId, true)
+    }
 
     return (
         <div className="tickets-wrapper">
             {
-                tickets && tickets.map(
+                tickets.map(
                     (ticket) => (
                         <Ticket
                             ticket={ticket}
-                            onClick={() => handleOnClick(ticket.id)}
-                            ticketSelected={selectedTicket}
+                            selectedTicketId={ticketId}
+                            onTicketSelected={() => onTicketSelected(ticket.id, !ticket.open)}
+                            onTicketClosed={() => handleOnTicketClosed(ticket.id)}
                         />
                     )
                 )
             }
         </div>
-    );
-};
+    )
+}
 
-export default Tickets;
+export default Tickets

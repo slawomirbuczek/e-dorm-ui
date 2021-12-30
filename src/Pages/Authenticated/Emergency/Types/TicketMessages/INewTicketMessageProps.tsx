@@ -1,4 +1,5 @@
 export default interface INewTicketMessageProps {
-    ticketId: number;
-    onNewTicketMessageAdded: () => void;
+    ticketId: number
+    ticketClosed: boolean
+    onNewTicketMessageAdded: () => void
 }

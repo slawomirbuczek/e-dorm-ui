@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import Header from './Components/Header';
-import ErrorInformation from '../ErrorInformation';
-import IInput from './Types/IInput';
-import EInputTypes from './Types/EInputTypes';
-import EErrorMessage from './Types/EErrorMessages';
-import './Styles/Input.scss';
+import React, {useEffect, useState} from 'react'
+import Header from './Components/Header'
+import ErrorInformation from '../ErrorInformation'
+import IInput from './Types/IInput'
+import EInputTypes from './Types/EInputTypes'
+import EErrorMessage from './Types/EErrorMessages'
+import './Styles/Input.scss'
 
 const FormInput = ({
                        type,
@@ -17,43 +17,43 @@ const FormInput = ({
                        isRequired,
                        onKeyPress
                    }: IInput) => {
-    const [errorInformation, setErrorInformation] = useState<string | null>(null);
-    const [isInputFilled, setIsInputFilled] = useState<boolean>(false);
-    const [inputType] = useState<EInputTypes>(type);
+    const [errorInformation, setErrorInformation] = useState<string | null>(null)
+    const [isInputFilled, setIsInputFilled] = useState<boolean>(false)
+    const [inputType] = useState<EInputTypes>(type)
 
     useEffect(() => {
-        isRequired && errorMessage && setErrorInformation(errorMessage);
-    }, [errorMessage, isRequired]);
+        isRequired && errorMessage && setErrorInformation(errorMessage)
+    }, [errorMessage, isRequired])
 
     const checkErrorMessage = (inputValue: string) => {
         if (inputValue) {
-            return null;
+            return null
         }
 
-        return EErrorMessage.EMPTY_FIELD;
-    };
+        return EErrorMessage.EMPTY_FIELD
+    }
 
     const onInputChange = ({target}: any) => {
-        const inputValue = target.value;
+        const inputValue = target.value
 
-        setIsInputFilled(false);
+        setIsInputFilled(false)
 
         if (isRequired) {
-            const errorMessage = checkErrorMessage(inputValue);
+            const errorMessage = checkErrorMessage(inputValue)
 
-            setErrorInformation(errorMessage);
+            setErrorInformation(errorMessage)
         }
 
-        return onChange(inputValue);
-    };
+        return onChange(inputValue)
+    }
 
     const onBlurChangeBorderStyle = () => {
         if (value) {
-            return setIsInputFilled(true);
+            return setIsInputFilled(true)
         }
 
-        return null;
-    };
+        return null
+    }
 
     return (
         <div className={`form-input-wrapper ${errorInformation ? 'error' : ''}`}>
@@ -71,7 +71,7 @@ const FormInput = ({
             </div>
             <ErrorInformation errorMessage={errorInformation}/>
         </div>
-    );
-};
+    )
+}
 
-export default FormInput;
+export default FormInput

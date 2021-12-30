@@ -1,36 +1,36 @@
-import {useContext, useEffect, useState} from "react";
-import {TokenContext} from "../../../../Context/Token";
-import sendRequest from "../../../../Authentication/sendRequest";
-import EApiMethods from "../../../../Utils/Types/EApiMethods";
-import IAnnouncements from "../Types/IAnnouncements";
-import "../Styles/Announcements.scss";
+import {useContext, useEffect, useState} from "react"
+import {TokenContext} from "../../../../Context/Token"
+import sendRequest from "../../../../Authentication/sendRequest"
+import EApiMethods from "../../../../Utils/Types/EApiMethods"
+import IAnnouncements from "../Types/IAnnouncements"
+import "../Styles/Announcements.scss"
 
 const Announcements = (): JSX.Element => {
 
-    const {isLoggedIn} = useContext(TokenContext);
-    const [announcements, setAnnouncements] = useState<IAnnouncements[] | null>(null);
+    const {isLoggedIn} = useContext(TokenContext)
+    const [announcements, setAnnouncements] = useState<IAnnouncements[] | null>(null)
 
     useEffect(() => {
         const getAnnouncements = async () => {
             if (!isLoggedIn) {
-                return null;
+                return null
             }
 
-            return updateAnnouncements();
-        };
-
-        getAnnouncements();
-    }, [isLoggedIn]);
-
-    const updateAnnouncements = async () => {
-        const response = await sendRequest(EApiMethods.GET, 'announcements');
-
-        if (!response) {
-            return null;
+            return updateAnnouncements()
         }
 
-        return setAnnouncements(response);
-    };
+        getAnnouncements()
+    }, [isLoggedIn])
+
+    const updateAnnouncements = async () => {
+        const response = await sendRequest(EApiMethods.GET, 'announcements')
+
+        if (!response) {
+            return null
+        }
+
+        return setAnnouncements(response)
+    }
 
 
     return (
@@ -51,8 +51,8 @@ const Announcements = (): JSX.Element => {
                 }
             </div>
         </div>
-    );
+    )
 
-};
+}
 
-export default Announcements;
+export default Announcements

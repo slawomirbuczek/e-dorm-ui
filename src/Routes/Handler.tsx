@@ -1,13 +1,13 @@
-import {TokenContext} from 'Context/Token';
-import {useContext} from 'react';
-import {BrowserRouter as Router, Redirect, Switch} from "react-router-dom";
-import ScrollToTop from 'Utils/Functions/ScrollToTop';
-import GlobalRoutes from './Global';
-import Authenticated from "./Authenticated";
-import NavBar from "../Components/NavBar/NavBar";
+import {TokenContext} from 'Context/Token'
+import {useContext} from 'react'
+import {BrowserRouter as Router, Redirect, Switch} from "react-router-dom"
+import ScrollToTop from 'Utils/Functions/ScrollToTop'
+import GlobalRoutes from './Global'
+import Authenticated from "./Authenticated"
+import NavBar from "../Components/NavBar/NavBar"
 
 const AppRoutesHandler = () => {
-    const {isLoggedIn} = useContext(TokenContext);
+    const {isLoggedIn} = useContext(TokenContext)
 
     if (isLoggedIn) {
         return (
@@ -16,12 +16,12 @@ const AppRoutesHandler = () => {
                 <div className="main-app-wrapper-authenticated">
                     <NavBar/>
                     <Switch>
-                        <Redirect exact from="/" to="/dashboard" />
-                        <Authenticated />
+                        <Redirect exact from="/" to="/dashboard"/>
+                        <Authenticated/>
                     </Switch>
                 </div>
             </Router>
-        );
+        )
     }
 
     return (
@@ -36,7 +36,7 @@ const AppRoutesHandler = () => {
                 </Switch>
             </div>
         </Router>
-    );
-};
+    )
+}
 
-export default AppRoutesHandler;
+export default AppRoutesHandler

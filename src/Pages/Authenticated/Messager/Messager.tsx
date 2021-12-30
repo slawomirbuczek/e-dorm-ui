@@ -1,56 +1,26 @@
-import {useEffect, useState} from "react";
-import sendRequest from "../../../Authentication/sendRequest";
-import EApiMethods from "../../../Utils/Types/EApiMethods";
-import IConversation from "./Types/IConversation";
-import IMessage from "./Types/IMessage";
-import Conversation from "./Components/Conversation";
-import "./Styles/Messager.scss";
-import Messages from "./Components/Messages";
+import "./Styles/Messager.scss"
+import {useState} from "react"
+import Messages from "./Components/Messages/Messages"
+import NewConversation from "./Components/Conversations/NewConversation"
+import Conversations from "./Components/Conversations/Conversations"
 
-const Messager = (): JSX.Element => {
-    const [conversations, setConversations] = useState<IConversation[] | null>(null);
-    const [messages, setMessages] = useState<IMessage[] | null>(null);
-    const [conversationId, setConversationId] = useState<number | null>(null);
-
-    useEffect(() => {
-        const getData = async () => {
-            const result = await sendRequest(EApiMethods.GET, '/conversations');
-
-            return setConversations(result);
-        };
-
-        getData();
-    }, []);
-
-    const getMessages = async (conversationId: number) => {
-        const result = await sendRequest(EApiMethods.GET, "/messages/" + conversationId);
-        setMessages(result);
-        setConversationId(conversationId);
-    };
-
+const Messager = () => {
+    const [conversationId, setConversationId] = useState<number>(0)
 
     return (
         <div className="messager-wrapper">
             <div className="messager-conversations">
-                <div className="messager-new-conversation">
-
-                </div>
+                <NewConversation onNewConversationAdded={(newConversationId) => setConversationId(newConversationId)}/>
+                <div className="messager-conversations-border"/>
+                <Conversations onClick={(selectedTicketId) => setConversationId(selectedTicketId)}/>
+            </div>
+            <div className="messager-messages">
                 {
-                    conversations && conversations.map(
-                        (conversation) => (
-                            <Conversation
-                                conversation={conversation}
-                                onClick={() => getMessages(conversation.conversationId)}
-                            />
-                        )
-                    )
+                    conversationId !== 0 && <Messages conversationId={conversationId}/>
                 }
             </div>
-            {
-                messages && conversationId && <Messages messages={messages} conversationId={conversationId}/>
-            }
         </div>
-    );
-};
+    )
+}
 
-export default Messager;
+export default Messager

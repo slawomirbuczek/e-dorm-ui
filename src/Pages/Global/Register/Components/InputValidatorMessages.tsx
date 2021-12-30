@@ -1,15 +1,15 @@
-import React from 'react';
-import IInputValidatorMessages from '../Types/IInputValidatorMessages';
-import TicIcon from 'Assets/Icons/correct-tic.svg';
-import ErrorIcon from 'Assets/Icons/cancel-red.svg';
+import React from 'react'
+import IInputValidatorMessages from '../Types/IInputValidatorMessages'
+import TicIcon from 'Assets/Icons/correct-tic.svg'
+import ErrorIcon from 'Assets/Icons/cancel-red.svg'
 
 interface IInputValidatorMessagesComponent {
-    inputValidator: IInputValidatorMessages[] | [];
+    inputValidator: IInputValidatorMessages[] | []
 }
 
 const InputValidatorMessages = ({inputValidator}: IInputValidatorMessagesComponent): JSX.Element => {
     if (!inputValidator.length) {
-        return <div className="input-validator"/>;
+        return <div className="input-validator"/>
     }
 
     return (
@@ -19,7 +19,7 @@ const InputValidatorMessages = ({inputValidator}: IInputValidatorMessagesCompone
                                                                              alt="status"/>{label}</p>
             ))}
         </div>
-    );
-};
+    )
+}
 
-export default InputValidatorMessages;
+export default InputValidatorMessages

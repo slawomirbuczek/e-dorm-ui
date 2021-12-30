@@ -1,9 +1,9 @@
-import Dashboard from 'Pages/Authenticated/Dashboard';
-import {Link, Route, Switch} from "react-router-dom";
-import Forum from "../Pages/Authenticated/Forum/Forum";
-import React from "react";
-import Messager from "../Pages/Authenticated/Messager/Messager";
-import Emergency from "../Pages/Authenticated/Emergency/Emergency";
+import Dashboard from 'Pages/Authenticated/Dashboard'
+import {Link, Route, Switch} from "react-router-dom"
+import Forum from "../Pages/Authenticated/Forum/Forum"
+import React from "react"
+import Messager from "../Pages/Authenticated/Messager/Messager"
+import Emergency from "../Pages/Authenticated/Emergency/Emergency"
 
 const Authenticated = () => (
     <Switch>
@@ -15,6 +15,6 @@ const Authenticated = () => (
             <Link to="/dashboard"/>
         </Route>
     </Switch>
-);
+)
 
-export default Authenticated;
+export default Authenticated

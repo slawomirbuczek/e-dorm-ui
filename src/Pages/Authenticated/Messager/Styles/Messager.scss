@@ -1,16 +1,24 @@
-@import 'src/Utils/Styles/variables.scss';
+@import 'src/Utils/Styles/variables';
 
 .messager-wrapper {
   height: calc(100vh - 97px);
   display: flex;
-
+  flex-direction: row;
 
   .messager-conversations {
-    width: 40*$base-pixel-size;
     height: 100%;
-    border-right: 4px solid $base-background;
+    width: 30%;
+
+    .messager-conversations-border {
+      border-top: 4px solid $base-background;
+    }
 
   }
 
+  .messager-messages {
+    height: 100%;
+    width: 70%;
+    border-left: 4px solid $base-background;
+  }
 
 }

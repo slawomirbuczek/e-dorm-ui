@@ -1,10 +1,10 @@
-import React from "react";
-import IPost from "../Types/IPost";
-import '../Styles/Post.scss';
-import getImageFromResponse from "../../../../Utils/Functions/getImageFromResponse";
+import React from "react"
+import IPost from "../Types/IPost"
+import '../Styles/Post.scss'
+import getImageFromResponse from "../../../../Utils/Functions/getImageFromResponse"
 
 const Post = ({post}: IPost) => {
-    const {id, photo, fullName, date, content, image, edited} = post;
+    const {id, photo, fullName, date, content, image, edited} = post
 
     return (
         <div className="post-wrapper">
@@ -19,7 +19,7 @@ const Post = ({post}: IPost) => {
                 <p className="date">{date}</p>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Post;
+export default Post

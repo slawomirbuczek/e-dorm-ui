@@ -1,9 +1,9 @@
-import React from 'react';
-import IHeader from '../Types/IHeader';
+import React from 'react'
+import IHeader from '../Types/IHeader'
 
 const Header = ({title, children}: IHeader) => {
     if (!title) {
-        return null;
+        return null
     }
 
     return (
@@ -11,7 +11,7 @@ const Header = ({title, children}: IHeader) => {
             <span>{title}</span>
             {children && children}
         </label>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

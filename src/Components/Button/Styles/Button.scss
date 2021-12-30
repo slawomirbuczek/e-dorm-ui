@@ -9,7 +9,7 @@
     color: $base-white;
 
 
-    &.primary {
+    &.primary, &.secondary {
       background-color: $base-foreground;
       border-radius: $base-pixel-size;
       border-color: rgba(44, 44, 44, 0);
@@ -29,6 +29,10 @@
         background-color: #F2F7FA;
         border-color: #F2F7FA;
       }
+    }
+
+    &.secondary {
+      background-color: $base-background;
     }
 
     &.navbar {

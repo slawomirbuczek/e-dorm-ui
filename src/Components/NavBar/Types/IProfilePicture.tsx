@@ -1,5 +1,5 @@
-import IUserBasicInfo from "./IUserBasicInfo";
+import IUserBasicInfo from "./IUserBasicInfo"
 
 export default interface IProfilePicture {
-    userBasicInfo: IUserBasicInfo | null;
+    userBasicInfo: IUserBasicInfo | null
 }

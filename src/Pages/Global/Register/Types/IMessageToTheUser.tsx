@@ -1,4 +1,4 @@
 export default interface IMessageToTheUser {
-    isSuccess: boolean;
-    message: string;
+    isSuccess: boolean
+    message: string
 }

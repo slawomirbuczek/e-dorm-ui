@@ -1,0 +1,33 @@
+@import 'src/Utils/Styles/variables';
+
+.conversation-wrapper {
+  margin-bottom: $base-pixel-size;
+  cursor: pointer;
+  background-color: $base-background;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  border: 1px solid $base-border;
+  display: flex;
+  flex-direction: row;
+
+  &.selected {
+    border: 2px solid $base-blue;
+  }
+
+  img {
+    height: 7*$base-pixel-size;
+    margin-right: $base-pixel-size;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center; /* align vertical */
+    text-overflow: ellipsis;
+  }
+
+}

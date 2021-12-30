@@ -1,4 +1,4 @@
-
 export default interface ITicketMessagesProps {
-    ticketId: number;
+    selectedTicketId: number
+    ticketClosed: boolean
 }

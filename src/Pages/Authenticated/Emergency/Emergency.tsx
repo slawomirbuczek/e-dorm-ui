@@ -1,37 +1,53 @@
-import Tickets from "./Components/Tickets/Tickets";
-import {useState} from "react";
-import sendRequest from "../../../Authentication/sendRequest";
-import EApiMethods from "../../../Utils/Types/EApiMethods";
-import ITicket from "./Types/Tickets/ITicket";
-import "./Styles/Emergency.scss";
-import NewTicket from "./Components/Tickets/NewTicket";
-import TicketMessages from "./Components/TicketMessages/TicketMessages";
+import "./Styles/Emergency.scss"
+import Tickets from "./Components/Tickets/Tickets"
+import {useEffect, useState} from "react"
+import NewTicket from "./Components/Tickets/NewTicket"
+import TicketMessages from "./Components/TicketMessages/TicketMessages"
 
 
 const Emergency = () => {
-    const [tickets, setTickets] = useState<ITicket[] | null>(null);
-    const [ticketId, setTicketId] = useState<number>(0);
+    const [selectedTicketId, setSelectedTicketId] = useState<number | null>(null)
+    const [ticketClosed, setTicketClosed] = useState<boolean>(false)
 
-    const getData = async () => {
-        const result = await sendRequest(EApiMethods.GET, '/tickets');
-        return setTickets(result);
-    };
+    useEffect(() => {
+
+
+    }, [ticketClosed])
 
     return (
         <div className="emergency-wrapper">
             <div className="emergency-tickets">
-                <NewTicket onNewTicketAdded={() => getData()}/>
+                <NewTicket
+                    onNewTicketAdded={
+                    (newTicketId) => {
+                        setSelectedTicketId(newTicketId)
+                        setTicketClosed(false)
+                    }
+                }
+                />
                 <div className="emergency-tickets-border"/>
-                <Tickets onClick={(ticketId) => setTicketId(ticketId)}/>
+                <Tickets
+                    ticketId={selectedTicketId}
+                    onTicketSelected={
+                        (ticketId, ticketClosed) => {
+                            setSelectedTicketId(ticketId)
+                            setTicketClosed(ticketClosed)
+                        }
+                    }
+                />
             </div>
             <div className="emergency-ticket-messages">
                 {
-                    ticketId != 0 && <TicketMessages ticketId={ticketId}/>
+                    selectedTicketId &&
+                    <TicketMessages
+                        selectedTicketId={selectedTicketId}
+                        ticketClosed={ticketClosed}
+                    />
                 }
             </div>
         </div>
-    );
+    )
 
-};
+}
 
-export default Emergency;
+export default Emergency

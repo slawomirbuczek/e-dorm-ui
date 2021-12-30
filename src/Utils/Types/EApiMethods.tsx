@@ -5,4 +5,4 @@ enum EApiMethods {
     PATCH = "patch"
 }
 
-export default EApiMethods;
+export default EApiMethods

@@ -1,0 +1,20 @@
+@import 'src/Utils/Styles/variables';
+
+.new-conversation-wrapper {
+  margin: $base-pixel-size;
+  padding: $base-pixel-size 2*$base-pixel-size;
+
+  .new-conversation-header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $base-pixel-size;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+}

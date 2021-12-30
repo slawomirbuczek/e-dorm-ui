@@ -1,37 +1,37 @@
-import React, {useContext, useEffect, useState} from 'react';
-import './Styles/Dashboard.scss';
-import IUserBasicInfo from "../../../Components/NavBar/Types/IUserBasicInfo";
-import sendRequest from "../../../Authentication/sendRequest";
-import EApiMethods from "../../../Utils/Types/EApiMethods";
-import {TokenContext} from "../../../Context/Token";
-import DashboardInfo from "./Components/DashboardInfo";
-import Announcements from "./Components/Announcements";
+import React, {useContext, useEffect, useState} from 'react'
+import './Styles/Dashboard.scss'
+import IUserBasicInfo from "../../../Components/NavBar/Types/IUserBasicInfo"
+import sendRequest from "../../../Authentication/sendRequest"
+import EApiMethods from "../../../Utils/Types/EApiMethods"
+import {TokenContext} from "../../../Context/Token"
+import DashboardInfo from "./Components/DashboardInfo"
+import Announcements from "./Components/Announcements"
 
 const Dashboard = (): JSX.Element => {
-    const {isLoggedIn} = useContext(TokenContext);
-    const [userBasicInfo, setUserBasicInfo] = useState<IUserBasicInfo | null>(null);
+    const {isLoggedIn} = useContext(TokenContext)
+    const [userBasicInfo, setUserBasicInfo] = useState<IUserBasicInfo | null>(null)
 
     useEffect(() => {
         const getUserData = async () => {
             if (!isLoggedIn) {
-                return null;
+                return null
             }
 
-            return updateUserData();
-        };
-
-        getUserData();
-    }, [isLoggedIn]);
-
-    const updateUserData = async () => {
-        const userData = await sendRequest(EApiMethods.GET, 'users/self');
-
-        if (!userData) {
-            return null;
+            return updateUserData()
         }
 
-        return setUserBasicInfo(userData);
-    };
+        getUserData()
+    }, [isLoggedIn])
+
+    const updateUserData = async () => {
+        const userData = await sendRequest(EApiMethods.GET, 'users/self')
+
+        if (!userData) {
+            return null
+        }
+
+        return setUserBasicInfo(userData)
+    }
 
     return (
         <div className="dashboard-wrapper">
@@ -48,7 +48,7 @@ const Dashboard = (): JSX.Element => {
                 <DashboardInfo/>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Dashboard;
+export default Dashboard

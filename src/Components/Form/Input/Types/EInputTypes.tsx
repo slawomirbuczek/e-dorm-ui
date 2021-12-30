@@ -4,4 +4,4 @@ enum EInputTypes {
     DATE = 'date'
 }
 
-export default EInputTypes;
+export default EInputTypes

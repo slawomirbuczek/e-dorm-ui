@@ -1,7 +1,7 @@
-import IContent from "./IContent";
+import IContent from "./IContent"
 
 export default interface IForum {
-    topic: IContent;
-    responses: IContent[];
+    topic: IContent
+    responses: IContent[]
 }
 

@@ -1,4 +1,4 @@
-
 export default interface ITicketsProps {
-    onClick: (ticketId: number) => void;
+    ticketId: number | null
+    onTicketSelected: (ticketId: number, ticketClosed: boolean) => void
 }

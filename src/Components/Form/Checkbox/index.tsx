@@ -1,34 +1,34 @@
-import React, {useEffect, useState} from 'react';
-import ErrorInformation from '../ErrorInformation';
-import Header from './Components/Header';
-import ICheckbox from './Types/ICheckbox';
-import EErrorMessage from './Types/EErrorMessages';
-import './Styles/Checkbox.scss';
+import React, {useEffect, useState} from 'react'
+import ErrorInformation from '../ErrorInformation'
+import Header from './Components/Header'
+import ICheckbox from './Types/ICheckbox'
+import EErrorMessage from './Types/EErrorMessages'
+import './Styles/Checkbox.scss'
 
 const FormCheckbox = ({isRequired, header, value, onChange, errorMessage}: ICheckbox) => {
-    const [errorInformation, setErrorInformation] = useState<string | null>(null);
+    const [errorInformation, setErrorInformation] = useState<string | null>(null)
 
     useEffect(() => {
-        isRequired && errorMessage && setErrorInformation(errorMessage);
-    }, [errorMessage, isRequired]);
+        isRequired && errorMessage && setErrorInformation(errorMessage)
+    }, [errorMessage, isRequired])
 
     const checkErrorMessage = (inputValue: boolean) => {
         if (inputValue) {
-            return null;
+            return null
         }
 
-        return EErrorMessage.IS_REQUIRED;
-    };
+        return EErrorMessage.IS_REQUIRED
+    }
 
     const onClick = () => {
         if (isRequired) {
-            const errorMessage = checkErrorMessage(!value);
+            const errorMessage = checkErrorMessage(!value)
 
-            setErrorInformation(errorMessage);
+            setErrorInformation(errorMessage)
         }
 
-        return onChange(!value);
-    };
+        return onChange(!value)
+    }
 
     return (
         <div className="form-checkbox-wrapper">
@@ -40,8 +40,8 @@ const FormCheckbox = ({isRequired, header, value, onChange, errorMessage}: IChec
             </div>
             <ErrorInformation errorMessage={errorInformation}/>
         </div>
-    );
-};
+    )
+}
 
 
-export default FormCheckbox;
+export default FormCheckbox

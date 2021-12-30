@@ -1,10 +1,10 @@
-import React from 'react';
-import IButton from './Types/IButton';
-import './Styles/Button.scss';
-import ImageDisplay from "./Components/ImageDisplay";
+import React from 'react'
+import IButton from './Types/IButton'
+import './Styles/Button.scss'
+import ImageDisplay from "./Components/ImageDisplay"
 
 const Button = (props: IButton) => {
-    const {value, onClick, disabled, type} = props;
+    const {value, onClick, disabled, type} = props
 
     return (
         <div className="button-wrapper">
@@ -13,7 +13,7 @@ const Button = (props: IButton) => {
                 <p>{value}</p>
             </button>
         </div>
-    );
-};
+    )
+}
 
-export default Button;
+export default Button

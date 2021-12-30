@@ -1,7 +1,7 @@
 const checkIfMatchLocation = (incomingPath: string, defaultPath: string) => {
-    const regex = '\\b' + defaultPath + '\\b';
+    const regex = '\\b' + defaultPath + '\\b'
 
-    return regex.match(incomingPath);
-};
+    return regex.match(incomingPath)
+}
 
-export default checkIfMatchLocation;
+export default checkIfMatchLocation

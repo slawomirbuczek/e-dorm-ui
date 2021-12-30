@@ -1,3 +1,3 @@
 export default interface INewTicketProps {
-    onNewTicketAdded: () => void;
+    onNewTicketAdded: (newTicketId: number) => void
 }

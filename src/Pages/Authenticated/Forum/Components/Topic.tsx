@@ -1,10 +1,10 @@
-import Post from "./Post";
-import ITopic from "../Types/ITopic";
-import '../Styles/Topic.scss';
+import Post from "./Post"
+import ITopic from "../Types/ITopic"
+import '../Styles/Topic.scss'
 
 const Topic = ({forum}: ITopic) => {
 
-    const {topic, responses} = forum;
+    const {topic, responses} = forum
 
     return (
         <div className="topic-wrapper">
@@ -21,7 +21,7 @@ const Topic = ({forum}: ITopic) => {
                 }
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Topic;
+export default Topic

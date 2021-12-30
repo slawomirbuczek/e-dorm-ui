@@ -1,94 +1,94 @@
-import Button from "Components/Button";
-import EButtonTypeList from "Components/Button/Types/EButtonTypeList";
-import FormInput from "Components/Form/Input";
-import EInputTypes from "Components/Form/Input/Types/EInputTypes";
-import {useContext, useRef, useState} from "react";
-import ILoginCredentials from "./Types/ILoginCredentials";
-import {Link, useHistory} from "react-router-dom";
-import {TokenContext} from "Context/Token";
-import IValidators from "./Types/IValidators";
-import checkValidation from "../Register/Functions/checkValidation";
-import MessageToTheUser from "./Components/MessageToTheUser";
-import IMessageToTheUser from "../Register/Types/IMessageToTheUser";
-import checkIfCanLogIn from "./Functions/checkIfCanLogIn";
-import "./Styles/Login.scss";
-import Footer from "../../../Components/Footer";
+import Button from "Components/Button"
+import EButtonTypeList from "Components/Button/Types/EButtonTypeList"
+import FormInput from "Components/Form/Input"
+import EInputTypes from "Components/Form/Input/Types/EInputTypes"
+import {useContext, useRef, useState} from "react"
+import ILoginCredentials from "./Types/ILoginCredentials"
+import {Link, useHistory} from "react-router-dom"
+import {TokenContext} from "Context/Token"
+import IValidators from "./Types/IValidators"
+import checkValidation from "../Register/Functions/checkValidation"
+import MessageToTheUser from "./Components/MessageToTheUser"
+import IMessageToTheUser from "../Register/Types/IMessageToTheUser"
+import checkIfCanLogIn from "./Functions/checkIfCanLogIn"
+import "./Styles/Login.scss"
+import Footer from "../../../Components/Footer"
 
 const Login = (): JSX.Element => {
-    const {loginUser} = useContext(TokenContext);
+    const {loginUser} = useContext(TokenContext)
     const [loginCredentials, setUpLoginCredentials] = useState<ILoginCredentials>({
         email: "",
         password: "",
-    });
+    })
     const [validators, setValidators] = useState<IValidators>({
         password: [],
         email: []
-    });
-    const userMessageRef = useRef<null | HTMLDivElement>(null);
+    })
+    const userMessageRef = useRef<null | HTMLDivElement>(null)
     const [messageToTheUser, setMessageToTheUser] = useState<IMessageToTheUser>({
         isSuccess: false,
         message: ''
-    });
-    const history = useHistory();
+    })
+    const history = useHistory()
 
     const onLoginUser = async () => {
-        const data = {...loginCredentials};
+        const data = {...loginCredentials}
 
-        const result = loginUser && await loginUser(data);
+        const result = loginUser && await loginUser(data)
 
         if (!result) {
             return setMessageToTheUser({
                 isSuccess: false,
                 message: 'Incorrect username or password'
-            });
+            })
         }
 
-        const {isSuccess} = result;
+        const {isSuccess} = result
 
         if (!isSuccess) {
             return setMessageToTheUser({
                 isSuccess: false,
                 message: 'Incorrect username or password'
-            });
+            })
         }
 
-        return history.push('/dashboard');
-    };
+        return history.push('/dashboard')
+    }
 
     const onLoginIn = async () => {
-        const canCreate = checkIfCanLogIn(validators) && (email && password);
+        const canCreate = checkIfCanLogIn(validators) && (email && password)
 
         if (!canCreate) {
             return setMessageToTheUser({
                 isSuccess: false,
                 message: 'You need to fill all of the fields'
-            });
+            })
         }
 
-        return onLoginUser();
-    };
+        return onLoginUser()
+    }
 
     const updateLoginCredentials = (key: string, value: string) => {
         setUpLoginCredentials((prevState) => ({
             ...prevState,
             [key]: value,
-        }));
-    };
+        }))
+    }
 
     const goThroughValidators = (key: string, value: string) => {
-        const validations = checkValidation(key, value);
+        const validations = checkValidation(key, value)
 
         setValidators(prevState => ({
             ...prevState,
             [key]: validations
-        }));
+        }))
 
-        return updateLoginCredentials(key, value);
-    };
+        return updateLoginCredentials(key, value)
+    }
 
-    const forgotPasswordHeader = <Link to="/forgot-password" tabIndex={-1}>Forgot your password?</Link>;
+    const forgotPasswordHeader = <Link to="/forgot-password" tabIndex={-1}>Forgot your password?</Link>
 
-    const {email, password} = loginCredentials;
+    const {email, password} = loginCredentials
 
     return (
         <div className="login-page-wrapper" ref={userMessageRef}>
@@ -140,7 +140,7 @@ const Login = (): JSX.Element => {
             <Footer/>
 
         </div>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

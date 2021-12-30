@@ -1,6 +1,6 @@
-import ISingleOption from "../../../../Components/Form/Select/Types/ISingleOption";
+import ISingleOption from "../../../../Components/Form/Select/Types/ISingleOption"
 
-export const defaultPrivacyOptions: ISingleOption[] = [
+export const defaultTicketOptions: ISingleOption[] = [
     {
         label: 'Zgłoszenie administracyjne',
         value: 'ADMINISTRATION'
@@ -13,6 +13,6 @@ export const defaultPrivacyOptions: ISingleOption[] = [
         label: 'Zgłoszenie sieciowe',
         value: 'NETWORK'
     }
-];
+]
 
-export default defaultPrivacyOptions;
+export default defaultTicketOptions

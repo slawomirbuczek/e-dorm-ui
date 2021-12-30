@@ -1,7 +1,7 @@
-import EButtonTypeList from "./EButtonTypeList";
+import EButtonTypeList from "./EButtonTypeList"
 
 export default interface IImageDisplay {
-    type: EButtonTypeList;
-    image?: string;
-    imageDescription?: string;
+    type: EButtonTypeList
+    image?: string
+    imageDescription?: string
 }

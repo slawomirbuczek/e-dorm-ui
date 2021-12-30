@@ -1,23 +1,23 @@
-import "../../Styles/TicketMessages/TicketMessages.scss";
-import ITicketMessagesProps from "../../Types/TicketMessages/ITicketMessagesProps";
-import TicketMessage from "./TicketMessage";
+import "../../Styles/TicketMessages/TicketMessages.scss"
+import ITicketMessagesProps from "../../Types/TicketMessages/ITicketMessagesProps"
+import TicketMessage from "./TicketMessage"
+import sendRequest from "../../../../../Authentication/sendRequest"
+import EApiMethods from "../../../../../Utils/Types/EApiMethods"
+import {useEffect, useState} from "react"
+import ITicketMessage from "../../Types/TicketMessages/ITicketMessage"
 import NewTicketMessage from "./NewTicketMessage";
-import sendRequest from "../../../../../Authentication/sendRequest";
-import EApiMethods from "../../../../../Utils/Types/EApiMethods";
-import {useEffect, useState} from "react";
-import ITicketMessage from "../../Types/TicketMessages/ITicketMessage";
 
-const TicketMessages = ({ticketId}: ITicketMessagesProps) => {
-    const [ticketMessages, setTicketMessages] = useState<ITicketMessage[]>([]);
+const TicketMessages = ({selectedTicketId, ticketClosed}: ITicketMessagesProps) => {
+    const [ticketMessages, setTicketMessages] = useState<ITicketMessage[]>([])
 
     useEffect(() => {
-        getTicketMessages(ticketId);
-    }, [ticketId]);
+        getTicketMessages()
+    }, [selectedTicketId])
 
-    const getTicketMessages = async (ticketId: number) => {
-        const result = await sendRequest(EApiMethods.GET, "/ticket-messages/" + ticketId);
-        setTicketMessages(result);
-    };
+    const getTicketMessages = async () => {
+        const result = await sendRequest(EApiMethods.GET, "/ticket-messages/" + selectedTicketId)
+        setTicketMessages(result)
+    }
 
     return (
         <div className="ticket-messages-wrapper">
@@ -31,11 +31,12 @@ const TicketMessages = ({ticketId}: ITicketMessagesProps) => {
                 }
             </div>
             <NewTicketMessage
-                ticketId={ticketId}
-                onNewTicketMessageAdded={() => getTicketMessages(ticketId)}
+                ticketId={selectedTicketId}
+                ticketClosed={ticketClosed}
+                onNewTicketMessageAdded={() => getTicketMessages()}
             />
         </div>
-    );
-};
+    )
+}
 
-export default TicketMessages;
+export default TicketMessages
