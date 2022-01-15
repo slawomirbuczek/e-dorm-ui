@@ -1,7 +1,7 @@
 @import 'src/Utils/Styles/variables.scss';
 
 .dashboard-info-wrapper {
-
+  padding-left: 4*$base-pixel-size;
   height: 50*$base-pixel-size;
 
   p {

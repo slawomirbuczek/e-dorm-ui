@@ -1,0 +1,17 @@
+@import 'src/Utils/Styles/variables';
+
+.rental-history-wrapper {
+  width: 90%;
+  height: 99%;
+  margin-left: 4*$base-pixel-size;
+  overflow-y: scroll;
+  padding-right: $base-pixel-size;
+
+  .rental-history-header {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: $base-pixel-size;
+  }
+
+}

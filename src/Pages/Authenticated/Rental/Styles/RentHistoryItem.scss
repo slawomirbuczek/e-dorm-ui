@@ -1,0 +1,14 @@
+@import 'src/Utils/Styles/variables';
+
+.rent-history-item-wrapper {
+  background-color: $base-background;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  border: 1px solid $base-border;
+  margin-bottom: $base-pixel-size;
+
+  p {
+    font-size: 20px;
+  }
+
+}

@@ -12,6 +12,7 @@ import emergency from "Assets/Images/emergency.png"
 import dormitory from "Assets/Images/dormitory.png"
 import reservation from "Assets/Images/reservation.png"
 import forum from "Assets/Images/forum.png"
+import rentable from "Assets/Images/vacuum.png"
 import room from "Assets/Images/room.png"
 import settings from "Assets/Images/setting.png"
 import logout from "Assets/Images/logout.png"
@@ -68,6 +69,13 @@ const NavBar = () => {
                     type={EButtonTypeList.IMAGE_PRIMARY}
                     image={forum}
                     imageDescription="forum"
+                    value=""
+                />
+                <Button
+                    onClick={() => history.push('/rentable')}
+                    type={EButtonTypeList.IMAGE_PRIMARY}
+                    image={rentable}
+                    imageDescription="rentable"
                     value=""
                 />
                 <Button

@@ -4,12 +4,14 @@ import Forum from "../Pages/Authenticated/Forum/Forum"
 import React from "react"
 import Messager from "../Pages/Authenticated/Messager/Messager"
 import Emergency from "../Pages/Authenticated/Emergency/Emergency"
+import Rental from "../Pages/Authenticated/Rental/Rental";
 
 const Authenticated = () => (
     <Switch>
         <Route exact path="/dashboard" component={Dashboard}/>
         <Route exact path="/forum" component={Forum}/>
         <Route exact path="/messager" component={Messager}/>
+        <Route exact path="/rentable" component={Rental}/>
         <Route exact path="/tickets" component={Emergency}/>
         <Route path="*">
             <Link to="/dashboard"/>

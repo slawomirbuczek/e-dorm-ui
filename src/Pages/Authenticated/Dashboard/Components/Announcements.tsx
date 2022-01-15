@@ -4,6 +4,8 @@ import sendRequest from "../../../../Authentication/sendRequest"
 import EApiMethods from "../../../../Utils/Types/EApiMethods"
 import IAnnouncements from "../Types/IAnnouncements"
 import "../Styles/Announcements.scss"
+import parseDateToSelectedFormat from "../../../../Utils/Functions/parseDateToSelectedFormat";
+import {EParseDateMethods} from "../../../../Utils/Types/EParseDateMethods";
 
 const Announcements = (): JSX.Element => {
 
@@ -44,7 +46,7 @@ const Announcements = (): JSX.Element => {
                                 <h3 className="name">{announcement.fullName}</h3>
                                 <h3 className="subject">{announcement.subject}</h3>
                                 <p className="content">{announcement.content}</p>
-                                <p className="date">{announcement.date}</p>
+                                <p className="date">{parseDateToSelectedFormat(new Date(announcement.date), EParseDateMethods.HHMMSS_DD_MM_YYYY)}</p>
                             </div>
                         )
                     )

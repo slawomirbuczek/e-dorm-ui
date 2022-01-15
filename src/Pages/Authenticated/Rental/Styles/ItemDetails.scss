@@ -1,0 +1,31 @@
+@import 'src/Utils/Styles/variables';
+
+.item-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 2*$base-pixel-size;
+  border-right: 4px solid $base-background;
+  border-left: 4px solid $base-background;
+
+  p {
+    margin-top: $base-pixel-size;
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  img {
+    max-width: 75*$base-pixel-size;
+    max-height: 50*$base-pixel-size;
+    margin-top: 5*$base-pixel-size;
+  }
+
+  .button-wrapper button {
+    margin-top: 5*$base-pixel-size;
+    background-color: $base-background;
+
+  }
+
+}

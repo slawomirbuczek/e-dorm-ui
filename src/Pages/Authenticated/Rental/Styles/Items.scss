@@ -1,0 +1,21 @@
+@import 'src/Utils/Styles/variables';
+
+.items-wrapper {
+  height: 99%;
+  width: 100%;
+  padding-right: $base-pixel-size;
+  overflow-y: scroll;
+  margin: $base-pixel-size;
+
+  .items-border {
+    border-top: 4px solid $base-background;
+  }
+
+  .items-header {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: $base-pixel-size;
+  }
+
+}
