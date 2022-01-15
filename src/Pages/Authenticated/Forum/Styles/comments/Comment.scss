@@ -1,12 +1,11 @@
 @import "src/Utils/Styles/variables";
 
-.post-wrapper {
-  color: $base-white;
-  display: grid;
-  grid-template-columns: 80px 1fr 100px;
+.comment-wrapper {
+  display: flex;
+  flex-direction: row;
   gap: 5*$base-pixel-size;
   width: 100%;
-
+  margin-top: 2*$base-pixel-size;
 
   .photo {
     width: 10*$base-pixel-size;
@@ -14,8 +13,8 @@
     margin-top: 1*$base-pixel-size;
   }
 
-  .post-content {
-
+  .comment-main {
+    width: 100%;
 
     .username {
       font-weight: bold;
@@ -27,7 +26,9 @@
     }
 
     .content {
-      word-break: break-all;
+      word-break: break-word;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .image {
@@ -36,19 +37,18 @@
       margin-top: 3*$base-pixel-size;
     }
 
-  }
+    .comment-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
-  .post-info {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    .edited,
-    .date {
-      font-style: italic;
-      text-align: right
+      .edited,
+      .date {
+        font-style: italic;
+        text-align: right
+      }
     }
+
   }
 
 }

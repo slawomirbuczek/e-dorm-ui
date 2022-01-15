@@ -3,5 +3,5 @@ export default interface ITicketMessage {
     content: string | null
     image: string | null
     createDate: string
-    sendByUser: boolean
+    sentByUser: boolean
 }

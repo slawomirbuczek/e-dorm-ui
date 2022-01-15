@@ -1,7 +1,7 @@
-export default interface IContent {
-    id: number
+export default interface IComment {
+    postId: number
     fullName: string
-    date: string
+    createDate: string
     edited: boolean
     content: string
     image: string | null

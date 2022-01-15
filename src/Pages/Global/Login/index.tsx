@@ -39,7 +39,7 @@ const Login = (): JSX.Element => {
         if (!result) {
             return setMessageToTheUser({
                 isSuccess: false,
-                message: 'Incorrect username or password'
+                message: 'Niepoprawne dane logowania'
             })
         }
 
@@ -48,7 +48,7 @@ const Login = (): JSX.Element => {
         if (!isSuccess) {
             return setMessageToTheUser({
                 isSuccess: false,
-                message: 'Incorrect username or password'
+                message: 'Niepoprawne dane logowania'
             })
         }
 
@@ -61,7 +61,7 @@ const Login = (): JSX.Element => {
         if (!canCreate) {
             return setMessageToTheUser({
                 isSuccess: false,
-                message: 'You need to fill all of the fields'
+                message: 'Wymagane jest wypełnienie wszystkich pól'
             })
         }
 
@@ -86,7 +86,7 @@ const Login = (): JSX.Element => {
         return updateLoginCredentials(key, value)
     }
 
-    const forgotPasswordHeader = <Link to="/forgot-password" tabIndex={-1}>Forgot your password?</Link>
+    const forgotPasswordHeader = <Link to="/forgot-password" tabIndex={-1}>Zapomniałeś hasła?</Link>
 
     const {email, password} = loginCredentials
 
@@ -97,12 +97,12 @@ const Login = (): JSX.Element => {
                 <Link to="/login">
                     <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="logo"/>
                 </Link>
-                <h1>Sign in to Virtual Dormitory</h1>
+                <h1>Zaloguj się do Wirtualnego Akademika</h1>
                 <p>
-                    By continuing, you agree to our{" "}
-                    <Link to={"/terms"}>User Agreement</Link>
-                    {" "}and{" "}
-                    <Link to="/privacy">Privacy Policy</Link>
+                    Przechodząc dalej, potwierdzasz{" "}
+                    <Link to={"/terms"}>Zgodę użytkownika</Link>
+                    {" "}i{" "}
+                    <Link to="/privacy">Politykę prywatności</Link>
                 </p>
             </div>
 
@@ -122,7 +122,7 @@ const Login = (): JSX.Element => {
                         value={password}
                         onChange={value => goThroughValidators('password', value)}
                         type={EInputTypes.PASSWORD}
-                        header="Password"
+                        header="Hasło"
                         headerChildren={forgotPasswordHeader}
                     />
                 </div>
@@ -133,8 +133,8 @@ const Login = (): JSX.Element => {
                 />
             </div>
             <div className="additional-info">
-                <p>Don’t have an account yet?</p>
-                <Link to="/register">Create an account</Link>
+                <p>Nie masz jeszcze konta?</p>
+                <Link to="/register">Stwórz konto</Link>
             </div>
 
             <Footer/>

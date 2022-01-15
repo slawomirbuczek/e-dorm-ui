@@ -1,0 +1,45 @@
+@import "src/Utils/Styles/variables";
+
+.new-topic-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  margin-top: 2*$base-pixel-size;
+
+  .new-topic-header {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 90%;
+    margin-top: 2*$base-pixel-size;
+    background-color: $base-foreground;
+    padding: $base-pixel-size 2*$base-pixel-size;
+    border-radius: 2*$base-pixel-size;
+    border: 1px solid $base-white;
+
+  }
+
+  .input-file-preview {
+    margin-top: 2*$base-pixel-size;
+    max-height: 10*$base-pixel-size;
+    max-width: 10*$base-pixel-size;
+  }
+
+  .input-file-image {
+    margin-top: 2*$base-pixel-size;
+    height: 4*$base-pixel-size;
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  .button-wrapper button.primary {
+    background-color: $base-background;
+    margin-top: 2*$base-pixel-size;
+  }
+}

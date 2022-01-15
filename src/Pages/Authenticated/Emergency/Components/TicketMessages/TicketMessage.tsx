@@ -6,10 +6,10 @@ import {EParseDateMethods} from "../../../../../Utils/Types/EParseDateMethods"
 
 const TicketMessage = ({ticketMessage}: ITicketMessageProps) => {
 
-    const {content, image, sendByUser, createDate} = ticketMessage
+    const {content, image, sentByUser, createDate} = ticketMessage
 
     return (
-        <div className={`ticket-message ${sendByUser ? "self" : "user"}`}>
+        <div className={`ticket-message ${sentByUser ? "self" : "user"}`}>
             {
                 image ? <img src={getImageFromResponse(image)} alt="message"/> : <p>{content}</p>
             }
