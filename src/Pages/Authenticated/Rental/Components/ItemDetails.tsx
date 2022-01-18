@@ -4,7 +4,7 @@ import getImageFromResponse from "../../../../Utils/Functions/getImageFromRespon
 import Button from "../../../../Components/Button";
 import EButtonTypeList from "../../../../Components/Button/Types/EButtonTypeList";
 import {useEffect, useState} from "react";
-import sendRequest from "../../../../Authentication/sendRequest";
+import sendRequest from "../../../../Requests/sendRequest";
 import EApiMethods from "../../../../Utils/Types/EApiMethods";
 import IRentableItemImage from "../Types/IRentableItemImage";
 
@@ -44,7 +44,7 @@ const ItemDetails = ({rentableItem, onItemRented}: IItemDetailsProps) => {
 
     return (
         <div className="item-details-wrapper">
-            <p>{rentableItem?.name}</p>
+            <p className="item-details-header">{rentableItem?.name}</p>
             {
                 rentableItemImage &&
                 <img src={getImageFromResponse(rentableItemImage.image)} alt="item"/>

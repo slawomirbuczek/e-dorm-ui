@@ -17,8 +17,8 @@ const RentHistoryItem = ({rentHistoryItem}: IRentHistoryItemProps) => {
             </p>
             <p>
                 <strong>Zwrócono:</strong> {returnDate
-                ? +parseDateToSelectedFormat(
-                    new Date(rentDate), EParseDateMethods.HHMMSS_DD_MM_YYYY
+                ? parseDateToSelectedFormat(
+                    new Date(returnDate), EParseDateMethods.HHMMSS_DD_MM_YYYY
                 )
                 : "-"}
 

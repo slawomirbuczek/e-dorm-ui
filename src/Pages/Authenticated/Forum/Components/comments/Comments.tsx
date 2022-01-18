@@ -1,7 +1,7 @@
 import '../../Styles/comments/Comments.scss'
 import React, {useEffect, useState} from "react"
 import ICommentsProps from "../../Types/comments/ICommentsProps"
-import sendRequest from "../../../../../Authentication/sendRequest";
+import sendRequest from "../../../../../Requests/sendRequest";
 import EApiMethods from "../../../../../Utils/Types/EApiMethods";
 import IComment from "../../Types/comments/IComment";
 import Comment from "./Comment";

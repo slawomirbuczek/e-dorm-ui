@@ -1,6 +1,6 @@
 import "./../Styles/RentHistory.scss";
 import {useEffect, useState} from "react";
-import sendRequest from "../../../../Authentication/sendRequest";
+import sendRequest from "../../../../Requests/sendRequest";
 import EApiMethods from "../../../../Utils/Types/EApiMethods";
 import IRentHistory from "../Types/IRentHistory";
 import RentHistoryItem from "./RentHistoryItem";

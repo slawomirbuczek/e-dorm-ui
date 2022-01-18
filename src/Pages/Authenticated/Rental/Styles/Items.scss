@@ -1,11 +1,12 @@
 @import 'src/Utils/Styles/variables';
 
 .items-wrapper {
-  height: 99%;
+  height: 98%;
   width: 100%;
   padding-right: $base-pixel-size;
   overflow-y: scroll;
   margin: $base-pixel-size;
+
 
   .items-border {
     border-top: 4px solid $base-background;

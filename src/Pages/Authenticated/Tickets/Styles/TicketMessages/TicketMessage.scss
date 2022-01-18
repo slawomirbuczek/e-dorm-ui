@@ -17,6 +17,15 @@
     display: inline-block;
   }
 
+  .image {
+    max-height: 100*$base-pixel-size;
+    max-width: 70*$base-pixel-size;
+  }
+
+  .content {
+    padding-bottom: $base-pixel-size;
+  }
+
   .date {
     font-style: italic;
   }

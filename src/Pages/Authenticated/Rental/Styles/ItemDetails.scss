@@ -9,7 +9,7 @@
   border-right: 4px solid $base-background;
   border-left: 4px solid $base-background;
 
-  p {
+  .item-details-header {
     margin-top: $base-pixel-size;
     font-size: 40px;
     font-weight: bold;
@@ -25,6 +25,8 @@
   .button-wrapper button {
     margin-top: 5*$base-pixel-size;
     background-color: $base-background;
+    font-size: 30px;
+    font-weight: bold;
 
   }
 

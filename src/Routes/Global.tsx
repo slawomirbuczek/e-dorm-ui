@@ -2,7 +2,7 @@ import About from 'Pages/Global/About'
 import Faq from 'Pages/Global/Faq'
 import Login from 'Pages/Global/Login'
 import Privacy from 'Pages/Global/Privacy'
-import Register from 'Pages/Global/Register'
+import Register from 'Pages/Global/Register/Register'
 import Terms from 'Pages/Global/Terms'
 import React from 'react'
 import {Link, Route, Switch} from "react-router-dom"

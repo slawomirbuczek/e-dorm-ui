@@ -1,5 +1,5 @@
-import axiosInstance from 'Authentication/axios'
-import sendRequest from 'Authentication/sendRequest'
+import axiosInstance from 'Requests/axios'
+import sendRequest from 'Requests/sendRequest'
 import React, {createContext, useState} from 'react'
 import EApiMethods from 'Utils/Types/EApiMethods'
 import ILogin from './Types/ILogin'

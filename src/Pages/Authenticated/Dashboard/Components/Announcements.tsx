@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from "react"
 import {TokenContext} from "../../../../Context/Token"
-import sendRequest from "../../../../Authentication/sendRequest"
+import sendRequest from "../../../../Requests/sendRequest"
 import EApiMethods from "../../../../Utils/Types/EApiMethods"
 import IAnnouncements from "../Types/IAnnouncements"
 import "../Styles/Announcements.scss"

@@ -7,7 +7,7 @@ import EInputTypes from "../../../../../Components/Form/Input/Types/EInputTypes"
 import Button from "../../../../../Components/Button"
 import EButtonTypeList from "../../../../../Components/Button/Types/EButtonTypeList"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import INewTicketProps from "../../Types/Tickets/INewTicketProps"
 import ETicketType from "../../Types/Tickets/ETicketType"
 

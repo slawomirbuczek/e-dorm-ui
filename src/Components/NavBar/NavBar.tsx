@@ -4,7 +4,7 @@ import EButtonTypeList from "../Button/Types/EButtonTypeList"
 import {useHistory} from "react-router"
 import './Styles/NavBar.scss'
 import IUserBasicInfo from "./Types/IUserBasicInfo"
-import sendRequest from "../../Authentication/sendRequest"
+import sendRequest from "../../Requests/sendRequest"
 import EApiMethods from "../../Utils/Types/EApiMethods"
 import {TokenContext} from "../../Context/Token"
 import message from "Assets/Images/message.png"

@@ -1,18 +1,13 @@
-import "./Styles/Emergency.scss"
-import Tickets from "./Components/Tickets/Tickets"
+import "./Styles/TicketsBoard.scss"
 import {useEffect, useState} from "react"
 import NewTicket from "./Components/Tickets/NewTicket"
 import TicketMessages from "./Components/TicketMessages/TicketMessages"
+import Tickets from "./Components/Tickets/Tickets";
 
 
-const Emergency = () => {
+const TicketsBoard = () => {
     const [selectedTicketId, setSelectedTicketId] = useState<number | null>(null)
     const [ticketClosed, setTicketClosed] = useState<boolean>(false)
-
-    useEffect(() => {
-
-
-    }, [ticketClosed])
 
     return (
         <div className="emergency-wrapper">
@@ -50,4 +45,4 @@ const Emergency = () => {
 
 }
 
-export default Emergency
+export default TicketsBoard

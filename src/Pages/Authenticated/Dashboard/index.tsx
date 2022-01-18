@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import './Styles/Dashboard.scss'
 import IUserBasicInfo from "../../../Components/NavBar/Types/IUserBasicInfo"
-import sendRequest from "../../../Authentication/sendRequest"
+import sendRequest from "../../../Requests/sendRequest"
 import EApiMethods from "../../../Utils/Types/EApiMethods"
 import {TokenContext} from "../../../Context/Token"
 import DashboardInfo from "./Components/DashboardInfo"

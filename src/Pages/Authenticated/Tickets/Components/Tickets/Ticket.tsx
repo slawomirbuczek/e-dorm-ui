@@ -5,7 +5,7 @@ import {EParseDateMethods} from "../../../../../Utils/Types/EParseDateMethods"
 import getValueFromTicketType from "../../Utils/ticketTypesValue"
 import Button from "../../../../../Components/Button"
 import EButtonTypeList from "../../../../../Components/Button/Types/EButtonTypeList"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 
 

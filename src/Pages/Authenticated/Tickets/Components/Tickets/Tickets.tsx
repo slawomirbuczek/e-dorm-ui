@@ -2,7 +2,7 @@ import "../../Styles/Tickets/Tickets.scss"
 import ITicketsProps from "../../Types/Tickets/ITicketsProps"
 import Ticket from "./Ticket"
 import {useEffect, useState} from "react"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 import ITicket from "../../Types/Tickets/ITicket"
 

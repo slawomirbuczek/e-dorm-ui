@@ -1,7 +1,7 @@
 import "../../Styles/Conversations/Conversations.scss"
 import {useEffect, useState} from "react"
 import IConversation from "../../Types/Conversations/IConversation"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 import IConversationsProps from "../../Types/Conversations/IConversationsProps"
 import Conversation from "./Conversation"

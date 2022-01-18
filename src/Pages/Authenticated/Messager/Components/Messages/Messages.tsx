@@ -1,7 +1,7 @@
 import "../../Styles/Messages/Messages.scss"
 import IMessagesProps from "../../Types/Messages/IMessagesProps"
 import IMessage from "../../Types/Messages/IMessage"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 import {useEffect, useState} from "react"
 import Message from "./Message"

@@ -1,6 +1,6 @@
 import "./../Styles/Items.scss"
 import {useEffect, useState} from "react";
-import sendRequest from "../../../../Authentication/sendRequest";
+import sendRequest from "../../../../Requests/sendRequest";
 import EApiMethods from "../../../../Utils/Types/EApiMethods";
 import IRentableItem from "../Types/IRentableItem";
 import Item from "./Item";

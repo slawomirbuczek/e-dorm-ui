@@ -1,6 +1,6 @@
 import '../../Styles/topics/Topics.scss'
 import React, {useEffect, useState} from "react"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 import ITopic from "../../Types/topics/ITopic"
 import Topic from "./Topic"

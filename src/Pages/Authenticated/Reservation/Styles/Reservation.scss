@@ -1,0 +1,8 @@
+@import 'src/Utils/Styles/variables';
+
+.reservation-wrapper {
+  height: calc(100vh - 97px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 500px 1fr 500px;
+}

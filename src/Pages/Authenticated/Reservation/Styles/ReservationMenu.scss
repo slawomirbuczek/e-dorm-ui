@@ -1,0 +1,24 @@
+@import 'src/Utils/Styles/variables';
+
+.reservation-menu-wrapper {
+  height: 98%;
+  width: 100%;
+  overflow-y: scroll;
+  padding-right: $base-pixel-size;
+  margin: $base-pixel-size;
+
+  .reservation-menu-header {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: $base-pixel-size;
+  }
+
+  .button-wrapper button.primary {
+    background-color: $base-background;
+    height: 10*$base-pixel-size;
+    width: 40*$base-pixel-size;
+    font-weight: bold;
+  }
+
+}

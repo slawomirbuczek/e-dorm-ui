@@ -1,0 +1,44 @@
+@import 'src/Utils/Styles/variables';
+
+.reservation-timetable-item-wrapper {
+  margin-bottom: $base-pixel-size;
+  cursor: pointer;
+  background-color: $base-background;
+  padding: $base-pixel-size 2*$base-pixel-size;
+  border-radius: 2*$base-pixel-size;
+  border: 1px solid $base-border;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+  }
+
+  &.selected {
+    border: 2px solid $base-blue;
+  }
+
+  .reservation-time {
+    width: 25%;
+  }
+
+  .reservation-availability {
+    font-weight: bold;
+    text-align: end;
+    align-items: end;
+    width: 75%;
+
+    &.available {
+      color: $base-greeen;
+    }
+
+    &.unavailable {
+      color: red;
+
+    }
+
+  }
+
+}

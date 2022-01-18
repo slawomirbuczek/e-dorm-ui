@@ -2,10 +2,11 @@
 
 .rental-history-wrapper {
   width: 90%;
-  height: 99%;
+  height: 98%;
   margin-left: 4*$base-pixel-size;
   overflow-y: scroll;
   padding-right: $base-pixel-size;
+  margin-top: $base-pixel-size;
 
   .rental-history-header {
     font-size: 25px;

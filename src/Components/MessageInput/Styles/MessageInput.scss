@@ -1,10 +1,9 @@
-@import "src/Utils/Styles/variables";
+@import 'src/Utils/Styles/variables';
 
-.new-comment-wrapper {
+.message-input-wrapper {
   display: flex;
   align-items: center;
-  margin-left: 15*$base-pixel-size;
-  padding-top: 2*$base-pixel-size;
+  padding: $base-pixel-size;
   border-top: 2px solid $base-background;
   margin-top: 2*$base-pixel-size;
 
@@ -41,7 +40,6 @@
       padding: $base-pixel-size 2*$base-pixel-size;
       border-radius: 2*$base-pixel-size;
       border: 1px solid $base-white;
-
     }
 
   }

@@ -1,0 +1,43 @@
+@import 'src/Utils/Styles/variables';
+
+.reservation-timetable-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 2*$base-pixel-size;
+  border-right: 4px solid $base-background;
+  border-left: 4px solid $base-background;
+
+  .reservation-change-day {
+    margin-top: 2*$base-pixel-size;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2*$base-pixel-size;
+    align-items: center;
+
+    p {
+      font-weight: bold;
+      font-size: 25px;
+      margin: 0 2*$base-pixel-size;
+    }
+
+    .button-wrapper button.primary {
+      background-color: $base-background;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+  }
+
+  .reservation-reserve {
+    .button-wrapper button.primary {
+      margin-top: 2*$base-pixel-size;
+      background-color: $base-background;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+
+}

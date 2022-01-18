@@ -40,6 +40,7 @@
     width: 100%;
     padding: 3.5*$base-pixel-size;
     color: #FFF;
+    margin-left: $base-pixel-size;
   }
 
   .success-message-container {
@@ -59,9 +60,11 @@
     }
 
     .input-container {
+      margin-bottom: 2*$base-pixel-size;
 
       .form-input-wrapper {
         margin-bottom: $base-pixel-size;
+
       }
 
       .input-validator {

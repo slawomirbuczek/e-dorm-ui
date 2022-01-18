@@ -18,6 +18,8 @@ const parseDateToSelectedFormat = (date: Date, format: EParseDateMethods): strin
         return `${year}-${month}-${day}`
     } else if (format === EParseDateMethods.HHMMSS_DD_MM_YYYY) {
         return `${hours}:${minutes}:${seconds} ${day}-${month}-${year}`
+    } else if (format === EParseDateMethods.DDMMMYYY) {
+        return `${day}-${month}-${year}`
     }
 
     return ''

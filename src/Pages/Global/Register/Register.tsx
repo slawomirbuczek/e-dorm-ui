@@ -7,7 +7,7 @@ import EInputTypes from 'Components/Form/Input/Types/EInputTypes'
 import FormCheckbox from 'Components/Form/Checkbox'
 import {Link} from 'react-router-dom'
 import checkIfCanCreateAccount from './Functions/checkIfCanCreateAccount'
-import sendRequest from 'Authentication/sendRequest'
+import sendRequest from 'Requests/sendRequest'
 import EApiMethods from 'Utils/Types/EApiMethods'
 import IMessageToTheUser from './Types/IMessageToTheUser'
 import MessageToTheUser from './Components/MessageToTheUser'
@@ -124,14 +124,13 @@ const Register = (): JSX.Element => {
                 <img src={process.env.PUBLIC_URL + '/favicon.ico'} alt="logo"/>
             </Link>
 
-            <h1>Sign up to Virtual Dormitory</h1>
+            <h1>Rejestracja w Wirtualnym Akademiku</h1>
 
             <MessageToTheUser {...messageToTheUser} />
 
             <div className="content-container">
                 <div className="form">
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.email}/>
                         <FormInput
                             value={email}
                             onChange={value => goThroughValidators('email', value)}
@@ -140,48 +139,43 @@ const Register = (): JSX.Element => {
                         />
                     </div>
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.password}/>
                         <FormInput
                             value={password}
                             onChange={value => goThroughValidators('password', value)}
                             type={EInputTypes.PASSWORD}
-                            header="Password"
+                            header="Hasło"
                         />
                     </div>
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.firstName}/>
                         <FormInput
                             value={firstName}
                             onChange={value => goThroughValidators('firstName', value)}
                             type={EInputTypes.TEXT}
-                            header="First name"
+                            header="Imię"
                         />
                     </div>
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.lastName}/>
                         <FormInput
                             value={lastName}
                             onChange={value => goThroughValidators('lastName', value)}
                             type={EInputTypes.TEXT}
-                            header="Last name"
+                            header="Nazwisko"
                         />
                     </div>
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.phoneNumber}/>
                         <FormInput
                             value={phoneNumber}
                             onChange={value => goThroughValidators('phoneNumber', value)}
                             type={EInputTypes.TEXT}
-                            header="Phone number"
+                            header="Numer telefonu"
                         />
                     </div>
                     <div className="input-container">
-                        <InputValidatorMessages inputValidator={validators.birthday}/>
                         <FormInput
                             value={birthday}
                             onChange={value => goThroughValidators('birthday', value)}
                             type={EInputTypes.DATE}
-                            header="Birthday"
+                            header="Data urodzenia"
                         />
                     </div>
                     <FormCheckbox
@@ -189,10 +183,10 @@ const Register = (): JSX.Element => {
                         onChange={value => setAgreeWithTerms(value)}
                         header={
                             <p>
-                                I agree to{" "}
-                                <Link to={"/terms"}>User Agreement</Link>
-                                {" "}and{" "}
-                                <Link to="/privacy">Privacy Policy</Link>
+                                Akceptuję{" "}
+                                <Link to={"/terms"}>Zgodę użytkownika</Link>
+                                {" "}oraz{" "}
+                                <Link to="/privacy">Politykę prywatności</Link>
                             </p>
                         }
                     />
@@ -200,7 +194,7 @@ const Register = (): JSX.Element => {
                 <Button
                     type={EButtonTypeList.PRIMARY}
                     onClick={onCreateAccount}
-                    value="Create account"
+                    value="Stwórz konto"
                 />
 
             </div>

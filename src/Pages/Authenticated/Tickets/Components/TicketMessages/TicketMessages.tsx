@@ -1,7 +1,7 @@
 import "../../Styles/TicketMessages/TicketMessages.scss"
 import ITicketMessagesProps from "../../Types/TicketMessages/ITicketMessagesProps"
 import TicketMessage from "./TicketMessage"
-import sendRequest from "../../../../../Authentication/sendRequest"
+import sendRequest from "../../../../../Requests/sendRequest"
 import EApiMethods from "../../../../../Utils/Types/EApiMethods"
 import {useEffect, useState} from "react"
 import ITicketMessage from "../../Types/TicketMessages/ITicketMessage"

@@ -4,7 +4,7 @@ import INewTopicProps from "../../Types/topics/INewTopicProps";
 import insertPicture from "../../../../../Assets/Images/insert-picture.png";
 import Button from "../../../../../Components/Button";
 import EButtonTypeList from "../../../../../Components/Button/Types/EButtonTypeList";
-import sendRequestWithFile from "../../../../../Authentication/sendRequestWithFile";
+import sendRequestWithFile from "../../../../../Requests/sendRequestWithFile";
 import EApiMethods from "../../../../../Utils/Types/EApiMethods";
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -17,7 +17,7 @@ const NewTopic = ({onNewTopicAdded}: INewTopicProps) => {
         formData.append("content", content)
 
         if (file) {
-            formData.append("image", file)
+            formData.append("file", file)
         }
 
         const response = await sendRequestWithFile(EApiMethods.POST, '/topics', formData)
@@ -38,18 +38,19 @@ const NewTopic = ({onNewTopicAdded}: INewTopicProps) => {
                         setContent(event.target.value)
                     }
                 }
+                value={content}
                 placeholder="Aa"
                 minRows={5}
             />
             {
                 file &&
-                <img className="input-file-preview" src={URL.createObjectURL(file)} alt="preview"/>
+                <img className="new-topic-input-file-preview" src={URL.createObjectURL(file)} alt="preview"/>
             }
-            <label htmlFor="input-file">
-                <img className="input-file-image" src={insertPicture} alt={"insert"}/>
+            <label htmlFor="new-topic-input-file">
+                <img className="new-topic-input-file-image" src={insertPicture} alt={"insert"}/>
             </label>
             <input
-                id="input-file"
+                id="new-topic-input-file"
                 type="file"
                 accept="image/*"
                 onChange={
